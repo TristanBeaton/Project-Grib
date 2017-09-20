@@ -21,6 +21,7 @@ class GribMessage {
     
     init(_ stream:GribFileStream) throws {
         
+        // Read the Idicator Section
         self.is = try IndicatorSection(stream)
         
         while stream.hasBytesAvailable {
