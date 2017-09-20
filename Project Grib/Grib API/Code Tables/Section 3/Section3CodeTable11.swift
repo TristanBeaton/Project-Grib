@@ -11,29 +11,20 @@ import Foundation
 enum Section3CodeTable11 {
     
     case None
-    
     case Parallels
-    
     case ExtremeCoordinateValues
-    
     case Latitudes
-    
     case Reserved
-    
     case Missing
     
     init(_ value:UInt8) {
-        
-        if value == 0 { self = .None; return }
-        
-        if value == 1 { self = .Parallels; return }
-        
-        if value == 2 { self = .ExtremeCoordinateValues; return }
-        
-        if value == 3 { self = .Latitudes; return }
-        
-        if value >= 4 && value <= 254 { self = .Reserved; return }
-        
-        self = .Missing
+        switch value {
+            case 0: self = .None
+            case 1: self = .Parallels
+            case 2: self = .ExtremeCoordinateValues
+            case 3: self = .Latitudes
+            case 255: self = .Missing
+            default:  self = .Reserved
+        }
     }
 }

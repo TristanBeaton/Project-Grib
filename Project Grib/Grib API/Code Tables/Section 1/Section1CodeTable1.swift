@@ -11,17 +11,13 @@ import Foundation
 enum Section1CodeTable1 {
 
     case LocalTablesNotUsed
-    
     case LocalTablesCount(UInt8)
-    
     case Missing
     
     init(_ value:UInt8) {
-        
+        // TODO Change this init method to a switch
         if value == 0 { self = .LocalTablesNotUsed; return }
-        
         if value == 255 { self = .Missing; return }
-        
         self = .LocalTablesCount(value)
     }
 }

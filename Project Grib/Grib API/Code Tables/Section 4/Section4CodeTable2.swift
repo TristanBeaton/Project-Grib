@@ -13,7 +13,6 @@ enum Section4CodeTable2 {
     case Missing
     
     init(_ value:UInt8) {
-        
         self = .Missing
     }
 }

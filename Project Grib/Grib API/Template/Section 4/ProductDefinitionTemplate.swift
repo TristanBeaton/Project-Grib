@@ -11,15 +11,10 @@ import Foundation
 class ProductDefinitionTemplate {
     
     static func template(_ stream:GribFileStream, _ type:Section4CodeTable0) throws -> ProductDefinitionTemplate {
-        
         switch type {
-            
         case .AnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime:
-            
             return try Section4Template0(stream)
-            
         default:
-            
             throw GribFileStreamError.UnsupportedTemplate(type)
         }
     }

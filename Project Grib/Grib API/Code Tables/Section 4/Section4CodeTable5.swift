@@ -53,87 +53,47 @@ enum Section4CodeTable5 {
     case Missing
     
     init(_ value:UInt8) {
-        
-        if value == 1 { self = .GroundOrWaterSurface; return }
-        
-        if value == 2 { self = .CloudBaseLevel; return }
-        
-        if value == 3 { self = .LevelOfCloudTops; return }
-        
-        if value == 4 { self = .LevelOf0CIsotherm; return }
-        
-        if value == 5 { self = .LevelOfAdiabaticCondensationLiftedFromTheSurface; return }
-        
-        if value == 6 { self = .MaximumWindLevel; return }
-        
-        if value == 7 { self = .Tropopause; return }
-        
-        if value == 8 { self = .NominalTopOfTheAtmosphere; return }
-        
-        if value == 9 { self = .SeaBottom; return }
-        
-        if value == 10 { self = .EntireAtmosphere; return }
-        
-        if value == 11 { self = .CumulonimbusBase; return }
-        
-        if value == 12 { self = .CumulonimbusTop; return }
-        
-        if value == 20 { self = .IsothermalLevel; return }
-        
-        if value == 100 { self = .IsobaricSurface; return }
-        
-        if value == 101 { self = .MeanSeaLevel; return }
-        
-        if value == 102 { self = .SpecificAltitudeAboveMeanSeaLevel; return }
-        
-        if value == 103 { self = .SpecifiedHeightLevelAboveGround; return }
-        
-        if value == 104 { self = .SigmaLevel; return }
-        
-        if value == 105 { self = .HybridLevel; return }
-        
-        if value == 106 { self = .DepthBelowLandSurface; return }
-        
-        if value == 107 { self = .IsentropicLevel; return }
-        
-        if value == 108 { self = .LevelAtSpecifiedPressureDifferenceFromGroundToLevel; return }
-        
-        if value == 109 { self = .PotentialVorticitySurface; return }
-        
-        if value == 111 { self = .EtaLevel; return }
-        
-        if value == 113 { self = .LogarithmicHybridLevel; return }
-        
-        if value == 114 { self = .SnowLevel; return }
-        
-        if value == 117 { self = .MixedLayerDepth; return }
-        
-        if value == 118 { self = .HybridHeightLevel; return }
-        
-        if value == 119 { self = .HybridPressureLevel; return }
-        
-        if value == 150 { self = .GeneralizedVerticalHeightCoordinate; return }
-        
-        if value == 160 { self = .DepthBelowSeaLevel; return }
-        
-        if value == 161 { self = .DepthBelowWaterSurface; return }
-        
-        if value == 162 { self = .LakeOrRiverBottom; return }
-        
-        if value == 163 { self = .BottomOfSedimentLayer; return }
-        
-        if value == 164 { self = .BottomOfThermallyActiveSedimentLayer; return }
-        
-        if value == 165 { self = .BottomOfSedimentLayerPenetratedByThermalWave; return }
-        
-        if value == 166 { self = .MixingLayer; return }
-        
-        if value == 167 { self = .BottomOfRootZone; return }
-        
-        if value >= 192 && value <= 254 { self = .ReservedForLocalUse; return }
-        
-        if value == 255 { self = .Missing; return }
-        
-        self = .Reserved
+        switch value {
+            case 1: self = .GroundOrWaterSurface
+            case 2: self = .CloudBaseLevel
+            case 3: self = .LevelOfCloudTops
+            case 4: self = .LevelOf0CIsotherm
+            case 5: self = .LevelOfAdiabaticCondensationLiftedFromTheSurface
+            case 6: self = .MaximumWindLevel
+            case 7: self = .Tropopause
+            case 8: self = .NominalTopOfTheAtmosphere
+            case 9: self = .SeaBottom
+            case 10: self = .EntireAtmosphere
+            case 11: self = .CumulonimbusBase
+            case 12: self = .CumulonimbusTop
+            case 20: self = .IsothermalLevel
+            case 100: self = .IsobaricSurface
+            case 101: self = .MeanSeaLevel
+            case 102: self = .SpecificAltitudeAboveMeanSeaLevel
+            case 103: self = .SpecifiedHeightLevelAboveGround
+            case 104: self = .SigmaLevel
+            case 105: self = .HybridLevel
+            case 106: self = .DepthBelowLandSurface
+            case 107: self = .IsentropicLevel
+            case 108: self = .LevelAtSpecifiedPressureDifferenceFromGroundToLevel
+            case 109: self = .PotentialVorticitySurface
+            case 111: self = .EtaLevel
+            case 113: self = .LogarithmicHybridLevel
+            case 114: self = .SnowLevel
+            case 117: self = .MixedLayerDepth
+            case 118: self = .HybridHeightLevel
+            case 119: self = .HybridPressureLevel
+            case 150: self = .GeneralizedVerticalHeightCoordinate
+            case 160: self = .DepthBelowSeaLevel
+            case 161: self = .DepthBelowWaterSurface
+            case 162: self = .LakeOrRiverBottom
+            case 163: self = .BottomOfSedimentLayer
+            case 164: self = .BottomOfThermallyActiveSedimentLayer
+            case 165: self = .BottomOfSedimentLayerPenetratedByThermalWave
+            case 166: self = .MixingLayer
+            case 167: self = .BottomOfRootZone
+            case 255: self = .Missing
+            default: if value >= 192 && value <= 254 { self = ReservedForLocalUse } else { self = .Reserved }
+        }
     }
 }

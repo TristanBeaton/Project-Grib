@@ -11,15 +11,10 @@ import Foundation
 class GridDefinitionTemplate: Template {
     
     static func template(_ stream:GribFileStream, _ type:Section3CodeTable1) throws -> GridDefinitionTemplate {
-        
         switch type {
-            
         case .LatitudeLongitude:
-            
             return try Section3Template0(stream)
-            
         default:
-            
             throw GribFileStreamError.UnsupportedTemplate(type)
         }
     }
