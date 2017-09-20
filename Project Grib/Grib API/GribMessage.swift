@@ -41,24 +41,31 @@ class GribMessage {
             let section = try stream.readUI8()
             switch section {
             case 1:
+                // Read the Identification Section
                 self.ids = try IdentificationSection(stream, length)
                 continue
             case 2:
+                // Read the Local Use Section
                 self.loc = try LocalUseSection(stream, length)
                 continue
             case 3:
+                // Read the Grid Definition Section
                 self.gds = try GridDefinitionSection(stream, length)
                 continue
             case 4:
+                // Read the Product Definition Section
                 self.pds = try ProductDefinitionSection(stream, length)
                 continue
             case 5:
+                // Read the Data Representation Section
                 self.drs = try DataRepresentationSection(stream, length)
                 continue
             case 6:
+                // Read the Bit-Map Section
                 self.bitmap = try BitmapSection(stream, length)
                 continue
             case 7:
+                // Read the Date Section
                 self.data = try DataSection(stream, length)
                 continue
             default:
