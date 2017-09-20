@@ -11,19 +11,12 @@ import Foundation
 class GribMessage {
     
     private(set) var `is`: IndicatorSection!
-    
     private(set) var ids: IdentificationSection!
-    
     private(set) var loc: LocalUseSection!
-    
     private(set) var gds: GridDefinitionSection!
-    
     private(set) var pds: ProductDefinitionSection!
-    
     private(set) var drs: DataRepresentationSection!
-    
     private(set) var bitmap: BitmapSection!
-    
     private(set) var data: DataSection!
     
     init(_ stream:GribFileStream) throws {
@@ -31,79 +24,43 @@ class GribMessage {
         self.is = try IndicatorSection(stream)
         
         while stream.hasBytesAvailable {
-            
             // Get the next 4 octets. This is either the length of the next section, or "7777".
             let bytes = try stream.readUI8(4)
             // Convert bytes to String
             let str = String(bytes: bytes, encoding: .utf8)
-            
             // Check if it is the end of the message
-            if str == "7777" {
-                
-                print("End of Grib Message")
-                
-                break
-            }
-            
+            if str == "7777" { break }
             // Otherwise, it must be the next sections length.
             let length: UInt32 = {
-               
                 let b = bytes.map { UInt32($0) }
-                
                 return b[0] << 24 | b[1] << 16 | b[2] << 8 | b[3]
             }()
             
             // Get the next section
             let section = try stream.readUI8()
-            
-            print(section, length)
-            
             switch section {
-                
             case 1:
-                
                 self.ids = try IdentificationSection(stream, length)
-                
                 continue
-                
             case 2:
-                
                 self.loc = try LocalUseSection(stream, length)
-                
                 continue
-                
             case 3:
-                
                 self.gds = try GridDefinitionSection(stream, length)
-                
                 continue
-                
             case 4:
-                
                 self.pds = try ProductDefinitionSection(stream, length)
-                
                 continue
-                
             case 5:
-                
                 self.drs = try DataRepresentationSection(stream, length)
-                
                 continue
-                
             case 6:
-                
                 self.bitmap = try BitmapSection(stream, length)
-                
                 continue
-                
             case 7:
-                
                 self.data = try DataSection(stream, length)
-                
                 continue
-                
             default:
-                
                 throw GribFileStreamError.InvalidSection(section)
             }
         }
