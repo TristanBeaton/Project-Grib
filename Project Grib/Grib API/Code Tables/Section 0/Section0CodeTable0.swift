@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section0CodeTable0 {
-
     case Meteorological
     case Hydrological
     case LandSurface

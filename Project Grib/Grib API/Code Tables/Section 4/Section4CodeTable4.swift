@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section4CodeTable4 {
-    
     case Minute
     case Hour
     case Day

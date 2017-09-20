@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section1CodeTable1 {
-
     case LocalTablesNotUsed
     case LocalTablesCount(UInt8)
     case Missing

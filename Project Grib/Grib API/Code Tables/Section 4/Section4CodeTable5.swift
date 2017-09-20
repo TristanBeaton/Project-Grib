@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section4CodeTable5 {
-    
     case GroundOrWaterSurface
     case CloudBaseLevel
     case LevelOfCloudTops
@@ -93,7 +92,7 @@ enum Section4CodeTable5 {
             case 166: self = .MixingLayer
             case 167: self = .BottomOfRootZone
             case 255: self = .Missing
-            default: if value >= 192 && value <= 254 { self = ReservedForLocalUse } else { self = .Reserved }
+            default: if value >= 192 && value <= 254 { self = .ReservedForLocalUse } else { self = .Reserved }
         }
     }
 }

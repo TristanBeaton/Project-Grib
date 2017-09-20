@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section3CodeTable11 {
-    
     case None
     case Parallels
     case ExtremeCoordinateValues

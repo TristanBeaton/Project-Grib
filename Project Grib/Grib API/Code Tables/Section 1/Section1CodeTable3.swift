@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section1CodeTable3 {
-    
     case OperationalProducts
     case OperationalTestProducts
     case ResearchProducts

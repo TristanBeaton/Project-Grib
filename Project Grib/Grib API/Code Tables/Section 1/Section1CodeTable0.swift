@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section1CodeTable0 {
-    
     case Experimental
     case Nov072001
     case Nov042003

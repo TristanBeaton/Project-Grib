@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section1CodeTable2 {
-    
     case Analysis
     case StartOfForecast
     case VerifyingTimeOfForecast

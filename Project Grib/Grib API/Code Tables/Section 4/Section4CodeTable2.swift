@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section4CodeTable2 {
-    
     case Missing
     
     init(_ value:UInt8) {

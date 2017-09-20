@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section4CodeTable1 {
-    
     case Temperature
     case Moisture
     case Momentum

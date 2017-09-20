@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section4CodeTable0 : Template {
-    
     case AnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
     case IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
     case DerivedForecastsBasedOnAllEnsembleMembersAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime

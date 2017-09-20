@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section3CodeTable2 {
-    
     case SphericalRadius6367470
     case SphericalRadiusSpecified
     case OblateSpheroidIAU
@@ -37,7 +36,7 @@ enum Section3CodeTable2 {
             case 8: self = .SphericalRadius6371200WGS84
             case 9: self = .Airy1830Spheroid
             case 255: self = .Missing
-            default: if value >= 192 && value <= 254 { self = ReservedForLocalUse } else { self = .Reserved }
+            default: if value >= 192 && value <= 254 { self = .ReservedForLocalUse } else { self = .Reserved }
         }
     }
 }

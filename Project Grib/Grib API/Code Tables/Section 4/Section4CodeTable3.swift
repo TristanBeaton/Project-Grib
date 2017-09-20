@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section4CodeTable3 {
-    
     case Analysis
     case Initialization
     case Forecast
