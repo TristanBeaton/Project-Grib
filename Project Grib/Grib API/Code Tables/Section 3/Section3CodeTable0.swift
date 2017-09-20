@@ -20,6 +20,7 @@ enum Section3CodeTable0 {
         switch value {
             case 0: self = .Section3CodeTable1
             case 1: self = .OriginatingCentre
+            case 255: self = .NotApplicable
             default: if value >= 192 && value <= 254 { self = ReservedForLocalUse } else { self = .Reserved }
         }
     }
