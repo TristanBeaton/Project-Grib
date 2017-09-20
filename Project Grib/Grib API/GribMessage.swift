@@ -12,7 +12,7 @@ class GribMessage {
     
     private(set) var `is`: IndicatorSection!
     private(set) var ids: IdentificationSection!
-    private(set) var loc: LocalUseSection!
+    private(set) var loc: LocalUseSection?
     private(set) var gds: GridDefinitionSection!
     private(set) var pds: ProductDefinitionSection!
     private(set) var drs: DataRepresentationSection!
