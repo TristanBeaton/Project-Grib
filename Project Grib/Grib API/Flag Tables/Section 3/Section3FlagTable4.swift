@@ -9,7 +9,6 @@
 import Foundation
 
 enum Section3FlagTable4 {
-    
     case IncrementI
     case DecrementI
     case DecrementJ
