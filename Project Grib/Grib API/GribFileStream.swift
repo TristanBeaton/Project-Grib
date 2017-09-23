@@ -51,12 +51,9 @@ class GribFileStream {
             var buffer = UInt8()
             let response = self.stream.read(&buffer, maxLength: MemoryLayout<UInt8>.size)
             switch response {
-            case 0:
-                throw GribFileStreamError.EndOfFile
-            case -1:
-                throw self.stream.streamError ?? GribFileStreamError.Unknown
-            default:
-                break
+                case 0: throw GribFileStreamError.EndOfFile
+                case -1: throw self.stream.streamError ?? GribFileStreamError.Unknown
+                default: break
             }
             return buffer
         }
@@ -68,12 +65,9 @@ class GribFileStream {
             var buffer = Array<UInt8>(repeating: 0, count: length)
             let response = self.stream.read(&buffer, maxLength: MemoryLayout<UInt8>.size * length)
             switch response {
-            case 0:
-                throw GribFileStreamError.EndOfFile
-            case -1:
-                throw self.stream.streamError ?? GribFileStreamError.Unknown
-            default:
-                break
+                case 0: throw GribFileStreamError.EndOfFile
+                case -1: throw self.stream.streamError ?? GribFileStreamError.Unknown
+                default: break
             }
             return buffer
         }
