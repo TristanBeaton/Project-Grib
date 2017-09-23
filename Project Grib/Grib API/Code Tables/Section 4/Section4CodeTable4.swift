@@ -26,21 +26,21 @@ enum Section4CodeTable4 {
     case Missing
     
     init(_ value:UInt8) {
-        // TODO Change this init method to a switch
-        if value == 0 { self = .Minute; return }
-        if value == 1 { self = .Hour; return }
-        if value == 2 { self = .Day; return }
-        if value == 3 { self = .Month; return }
-        if value == 4 { self = .Year; return }
-        if value == 5 { self = .Decade; return }
-        if value == 6 { self = .Normal; return }
-        if value == 7 { self = .Century; return }
-        if value == 10 { self = .ThreeHours; return }
-        if value == 11 { self = .SixHours; return }
-        if value == 12 { self = .TwelveHours; return }
-        if value == 13 { self = .Second; return }
-        if value >= 192 && value <= 254 { self = .ReservedForLocalUse; return }
-        if value == 255 { self = .Missing; return }
-        self = .Reserved
+        switch value {
+            case 0: self = .Minute
+            case 1: self = .Hour
+            case 2: self = .Day
+            case 3: self = .Month
+            case 4: self = .Year
+            case 5: self = .Decade
+            case 6: self = .Normal
+            case 7: self = .Century
+            case 10: self = .ThreeHours
+            case 11: self = .SixHours
+            case 12: self = .TwelveHours
+            case 13: self = .Second
+            case 255: self = .Missing
+            default: if value >= 192 && value <= 254 { self = .ReservedForLocalUse } else { self = .Reserved }
+        }
     }
 }

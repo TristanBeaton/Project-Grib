@@ -58,52 +58,52 @@ enum Section4CodeTable0 : Template {
     case Missing
     
     init(_ value:UInt16) {
-        // TODO Change this init method to a switch
-        if value == 0 { self = .AnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 1 { self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 2 { self = .DerivedForecastsBasedOnAllEnsembleMembersAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 3 { self = .DerivedForecastsBasedOnAClusterOfEnsembleMembersOverARectangularAreaAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 4 { self = .DerivedForecastsBasedOnAClusterOfEnsembleMembersOverACircularAreaAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 5 { self = .ProbabilityForecastsAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 6 { self = .PercentileForecastsAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 7 { self = .AnalysisOrForecastErrorAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 8 { self = .AverageAccumulationExtremeValuesOrOtherStatisticallyProcessedValuesAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval; return }
-        if value == 9 { self = .ProbabilityForecastsAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval; return }
-        if value == 10 { self = .PercentileForecastsAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval; return }
-        if value == 11 { self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousInterval; return }
-        if value == 12 { self = .DerivedForecastsBasedOnAllEnsembleMembersAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousInterval; return }
-        if value == 13 { self = .DerivedForecastsBasedOnAClusterOfEnsembleMembersOverARectangularAreaAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousInterval; return }
-        if value == 14 { self = .DerivedForecastsBasedOnAClusterOfEnsembleMembersOverACircularAreaAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousInterval; return }
-        if value == 15 { self = .AverageAccumulationExtremeValuesOrOtherStatisticallyProcessedValuesOverASpatialAreaAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 20 { self = .RadarProduct; return }
-        if value == 30 { self = .SatelliteProductDeprecated; return }
-        if value == 31 { self = .SatelliteProduct; return }
-        if value == 32 { self = .AnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTimeForSimulatedSyntheticSatelliteData; return }
-        if value == 33 { self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTimeForSimulatedSatelliteData; return }
-        if value == 34 { self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousIntervalForSimulatedSyntheticSatelliteData; return }
-        if value == 40 { self = .AnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTimeForAtmosphericChemicalConstituents; return }
-        if value == 41 { self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTimeForAtmosphericChemicalConstituents; return }
-        if value == 42 { self = .AverageAccumulationAndOrExtremeValuesOrOtherStatisticallyProcessedValuesAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeIntervalForAtmosphericChemicalConstituents; return }
-        if value == 43 { self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeIntervalForAtmosphericChemicalConstituents; return }
-        if value == 44 { self = .AerosolAnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 45 { self = .AerosolIndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 46 { self = .AerosolAverageAccumulationAndOrExtremeValuesOrOtherStatisticallyProcessedValuesAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval; return }
-        if value == 47 { self = .AerosolIndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeIntervalForAerosol; return }
-        if value == 50 { self = .AnalysisOrForecastOfAMultiComponentParameterOrMatrixElementAtAPointInTimeValidation; return }
-        if value == 51 { self = .CategoricalForecastsAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 53 { self = .PartitionedParametersAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 54 { self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTimeForPartitionedParameters; return }
-        if value == 60 { self = .IndividualEnsembleReforecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime; return }
-        if value == 61 { self = .IndividualEnsembleReforecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval; return }
-        if value == 91 { self = .CategoricalForecastsAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval; return }
-        if value == 254 { self = .CCITTIA5CharacterString; return }
-        if value == 1000 { self = .CrossSectionOfAnalysisAndForecastAtAPointInTime; return }
-        if value == 1001 { self = .CrossSectionOfAveragedOrOtherwiseStatisticallyProcessedAnalysisOrForecastOverARangeOfTime; return }
-        if value == 1002 { self = .CrossSectionOfAnalysisAndForecastAveragedOrOtherwiseStatisticallyProcessedOverLatitudeOrLongitude; return }
-        if value == 1100 { self = .HovmoellerTypeGridWithNoAveragingOrOtherStatisticalProcessing; return }
-        if value == 1101 { self = .HovmoellerTypeGridWithAveragingOrOtherStatisticalProcessing; return }
-        if value >= 32768 && value <= 65534 { self = .ReservedForLocalUse; return }
-        if value == 65535 { self = .Missing; return }
-        self = .Reserved
+        switch value {
+            case 0: self = .AnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 1: self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 2: self = .DerivedForecastsBasedOnAllEnsembleMembersAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 3: self = .DerivedForecastsBasedOnAClusterOfEnsembleMembersOverARectangularAreaAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 4: self = .DerivedForecastsBasedOnAClusterOfEnsembleMembersOverACircularAreaAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 5: self = .ProbabilityForecastsAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 6: self = .PercentileForecastsAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 7: self = .AnalysisOrForecastErrorAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 8: self = .AverageAccumulationExtremeValuesOrOtherStatisticallyProcessedValuesAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval
+            case 9: self = .ProbabilityForecastsAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval
+            case 10: self = .PercentileForecastsAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval
+            case 11: self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousInterval
+            case 12: self = .DerivedForecastsBasedOnAllEnsembleMembersAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousInterval
+            case 13: self = .DerivedForecastsBasedOnAClusterOfEnsembleMembersOverARectangularAreaAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousInterval
+            case 14: self = .DerivedForecastsBasedOnAClusterOfEnsembleMembersOverACircularAreaAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousInterval
+            case 15: self = .AverageAccumulationExtremeValuesOrOtherStatisticallyProcessedValuesOverASpatialAreaAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 20: self = .RadarProduct
+            case 30: self = .SatelliteProductDeprecated
+            case 31: self = .SatelliteProduct
+            case 32: self = .AnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTimeForSimulatedSyntheticSatelliteData
+            case 33: self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTimeForSimulatedSatelliteData
+            case 34: self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousIntervalForSimulatedSyntheticSatelliteData
+            case 40: self = .AnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTimeForAtmosphericChemicalConstituents
+            case 41: self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTimeForAtmosphericChemicalConstituents
+            case 42: self = .AverageAccumulationAndOrExtremeValuesOrOtherStatisticallyProcessedValuesAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeIntervalForAtmosphericChemicalConstituents
+            case 43: self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeIntervalForAtmosphericChemicalConstituents
+            case 44: self = .AerosolAnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 45: self = .AerosolIndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 46: self = .AerosolAverageAccumulationAndOrExtremeValuesOrOtherStatisticallyProcessedValuesAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval
+            case 47: self = .AerosolIndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeIntervalForAerosol
+            case 50: self = .AnalysisOrForecastOfAMultiComponentParameterOrMatrixElementAtAPointInTimeValidation
+            case 51: self = .CategoricalForecastsAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 53: self = .PartitionedParametersAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 54: self = .IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTimeForPartitionedParameters
+            case 60: self = .IndividualEnsembleReforecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
+            case 61: self = .IndividualEnsembleReforecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval
+            case 91: self = .CategoricalForecastsAtAHorizontalLevelOrInAHorizontalLayerInAContinuousOrNonContinuousTimeInterval
+            case 254: self = .CCITTIA5CharacterString
+            case 1000: self = .CrossSectionOfAnalysisAndForecastAtAPointInTime
+            case 1001: self = .CrossSectionOfAveragedOrOtherwiseStatisticallyProcessedAnalysisOrForecastOverARangeOfTime
+            case 1002: self = .CrossSectionOfAnalysisAndForecastAveragedOrOtherwiseStatisticallyProcessedOverLatitudeOrLongitude
+            case 1100: self = .HovmoellerTypeGridWithNoAveragingOrOtherStatisticalProcessing
+            case 1101: self = .HovmoellerTypeGridWithAveragingOrOtherStatisticalProcessing
+            case 65535: self = .Missing
+            default: if value >= 32768 && value <= 65534 { self = .ReservedForLocalUse } else { self = .Reserved }
+        }
     }
 }

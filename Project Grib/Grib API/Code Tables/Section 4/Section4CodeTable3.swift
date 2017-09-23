@@ -30,25 +30,25 @@ enum Section4CodeTable3 {
     case Missing
     
     init(_ value:UInt8) {
-        // TODO Change this init method to a switch
-        if value == 0 { self = .Analysis; return }
-        if value == 1 { self = .Initialization; return }
-        if value == 2 { self = .Forecast; return }
-        if value == 3 { self = .BiasCorrectedForecast; return }
-        if value == 4 { self = .EnsembleForecast; return }
-        if value == 5 { self = .ProbabilityForecast; return }
-        if value == 6 { self = .ForecastError; return }
-        if value == 7 { self = .AnalysisError; return }
-        if value == 8 { self = .Observation; return }
-        if value == 9 { self = .Climatological; return }
-        if value == 10 { self = .ProbabilityWeightedForecast; return }
-        if value == 11 { self = .BiasCorrectedEnsembleForecast; return }
-        if value == 12 { self = .PostProcessedAnalysis; return }
-        if value == 13 { self = .PostProcessedForecast; return }
-        if value == 14 { self = .Nowcast; return }
-        if value == 15 { self = .Hindcast; return }
-        if value >= 192 && value <= 254 { self = .ReservedForLocalUse; return }
-        if value == 255 { self = .Missing; return }
-        self = .Reserved
+        switch value {
+            case 0: self = .Analysis
+            case 1: self = .Initialization
+            case 2: self = .Forecast
+            case 3: self = .BiasCorrectedForecast
+            case 4: self = .EnsembleForecast
+            case 5: self = .ProbabilityForecast
+            case 6: self = .ForecastError
+            case 7: self = .AnalysisError
+            case 8: self = .Observation
+            case 9: self = .Climatological
+            case 10: self = .ProbabilityWeightedForecast
+            case 11: self = .BiasCorrectedEnsembleForecast
+            case 12: self = .PostProcessedAnalysis
+            case 13: self = .PostProcessedForecast
+            case 14: self = .Nowcast
+            case 15: self = .Hindcast
+            case 255: self = .Missing
+        default: if value >= 192 && value <= 254 { self = .ReservedForLocalUse } else { self = .Reserved }
+        }
     }
 }
