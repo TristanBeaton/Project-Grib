@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDCA97EE1F709A5200EE14F8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97ED1F709A5200EE14F8 /* main.swift */; };
+		FDCA97F51F709A8500EE14F8 /* GribFileStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97F41F709A8500EE14F8 /* GribFileStream.swift */; };
+		FDCA97F71F70AB0000EE14F8 /* GribMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97F61F70AB0000EE14F8 /* GribMessage.swift */; };
+		FDCA97F91F70ABCB00EE14F8 /* IndicatorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97F81F70ABCB00EE14F8 /* IndicatorSection.swift */; };
+		FDCA97FE1F70AF7B00EE14F8 /* Section0CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97FD1F70AF7B00EE14F8 /* Section0CodeTable0.swift */; };
+		FDCA98001F70B17800EE14F8 /* IdentificationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97FF1F70B17800EE14F8 /* IdentificationSection.swift */; };
+		FDCA98041F70B28700EE14F8 /* Section1CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98031F70B28700EE14F8 /* Section1CodeTable0.swift */; };
+		FDCA98061F70B28F00EE14F8 /* Section1CodeTable1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98051F70B28F00EE14F8 /* Section1CodeTable1.swift */; };
+		FDCA98081F70B29600EE14F8 /* Section1CodeTable2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98071F70B29600EE14F8 /* Section1CodeTable2.swift */; };
+		FDCA980A1F70B2A000EE14F8 /* Section1CodeTable3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98091F70B2A000EE14F8 /* Section1CodeTable3.swift */; };
+		FDCA980C1F70B2A800EE14F8 /* Section1CodeTable4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA980B1F70B2A800EE14F8 /* Section1CodeTable4.swift */; };
+		FDCA980E1F70CE8100EE14F8 /* LocalUseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA980D1F70CE8100EE14F8 /* LocalUseSection.swift */; };
+		FDCA98101F70CEC400EE14F8 /* GridDefinitionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA980F1F70CEC400EE14F8 /* GridDefinitionSection.swift */; };
+		FDCA98121F70D00C00EE14F8 /* ProductDefinitionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98111F70D00C00EE14F8 /* ProductDefinitionSection.swift */; };
+		FDCA98141F70D04800EE14F8 /* DataRepresentationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98131F70D04800EE14F8 /* DataRepresentationSection.swift */; };
+		FDCA98161F70D09100EE14F8 /* BitmapSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98151F70D09100EE14F8 /* BitmapSection.swift */; };
+		FDCA98181F70D0AC00EE14F8 /* DataSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98171F70D0AC00EE14F8 /* DataSection.swift */; };
+		FDCA981B1F70D2C900EE14F8 /* Section3CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA981A1F70D2C900EE14F8 /* Section3CodeTable0.swift */; };
+		FDCA981D1F70D2D100EE14F8 /* Section3CodeTable1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA981C1F70D2D100EE14F8 /* Section3CodeTable1.swift */; };
+		FDCA981F1F70D2D900EE14F8 /* Section3CodeTable11.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA981E1F70D2D900EE14F8 /* Section3CodeTable11.swift */; };
+		FDCA98231F70D8BF00EE14F8 /* GridDefinitionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98221F70D8BF00EE14F8 /* GridDefinitionTemplate.swift */; };
+		FDCA98251F70DAB400EE14F8 /* Section3Template0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98241F70DAB400EE14F8 /* Section3Template0.swift */; };
+		FDCA98271F70DC3600EE14F8 /* Section3CodeTable2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98261F70DC3600EE14F8 /* Section3CodeTable2.swift */; };
+		FDCA982B1F70DFB300EE14F8 /* Section3FlagTable3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA982A1F70DFB300EE14F8 /* Section3FlagTable3.swift */; };
+		FDCA982D1F70DFBC00EE14F8 /* Section3FlagTable4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA982C1F70DFBC00EE14F8 /* Section3FlagTable4.swift */; };
+		FDCA98301F711C2E00EE14F8 /* Section4CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA982F1F711C2E00EE14F8 /* Section4CodeTable0.swift */; };
+		FDCA98331F71B06B00EE14F8 /* ProductDefinitionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98321F71B06B00EE14F8 /* ProductDefinitionTemplate.swift */; };
+		FDCA98351F71B09D00EE14F8 /* Section4Template0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98341F71B09D00EE14F8 /* Section4Template0.swift */; };
+		FDCA98371F71B0F400EE14F8 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98361F71B0F400EE14F8 /* Template.swift */; };
+		FDCA983A1F71B59600EE14F8 /* Section4CodeTable1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98391F71B59600EE14F8 /* Section4CodeTable1.swift */; };
+		FDCA983C1F71B5A100EE14F8 /* Section4CodeTable2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA983B1F71B5A100EE14F8 /* Section4CodeTable2.swift */; };
+		FDCA983E1F71B5A800EE14F8 /* Section4CodeTable3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA983D1F71B5A800EE14F8 /* Section4CodeTable3.swift */; };
+		FDCA98401F71B5B100EE14F8 /* Section4CodeTable4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA983F1F71B5B100EE14F8 /* Section4CodeTable4.swift */; };
+		FDCA98421F71B64500EE14F8 /* Section4CodeTable5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98411F71B64500EE14F8 /* Section4CodeTable5.swift */; };
+		FDF5DDC11F720CD500F9DC04 /* Section5CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5DDC01F720CD500F9DC04 /* Section5CodeTable0.swift */; };
+		FDF5DDC41F720F9100F9DC04 /* DataRepresentationTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5DDC31F720F9100F9DC04 /* DataRepresentationTemplate.swift */; };
+		FDF5DDC61F7211DB00F9DC04 /* Section5Template0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5DDC51F7211DB00F9DC04 /* Section5Template0.swift */; };
+		FDF9A6CC1F7215E20090DDDA /* Section5CodeTable1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9A6CB1F7215E20090DDDA /* Section5CodeTable1.swift */; };
+		FDF9A6CF1F7230520090DDDA /* Section6CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9A6CE1F7230520090DDDA /* Section6CodeTable0.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDCA97E81F709A5200EE14F8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FDCA97EA1F709A5200EE14F8 /* Project Grib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project Grib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA97ED1F709A5200EE14F8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		FDCA97F41F709A8500EE14F8 /* GribFileStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GribFileStream.swift; sourceTree = "<group>"; };
+		FDCA97F61F70AB0000EE14F8 /* GribMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GribMessage.swift; sourceTree = "<group>"; };
+		FDCA97F81F70ABCB00EE14F8 /* IndicatorSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorSection.swift; sourceTree = "<group>"; };
+		FDCA97FD1F70AF7B00EE14F8 /* Section0CodeTable0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section0CodeTable0.swift; sourceTree = "<group>"; };
+		FDCA97FF1F70B17800EE14F8 /* IdentificationSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentificationSection.swift; sourceTree = "<group>"; };
+		FDCA98031F70B28700EE14F8 /* Section1CodeTable0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section1CodeTable0.swift; sourceTree = "<group>"; };
+		FDCA98051F70B28F00EE14F8 /* Section1CodeTable1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section1CodeTable1.swift; sourceTree = "<group>"; };
+		FDCA98071F70B29600EE14F8 /* Section1CodeTable2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section1CodeTable2.swift; sourceTree = "<group>"; };
+		FDCA98091F70B2A000EE14F8 /* Section1CodeTable3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section1CodeTable3.swift; sourceTree = "<group>"; };
+		FDCA980B1F70B2A800EE14F8 /* Section1CodeTable4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section1CodeTable4.swift; sourceTree = "<group>"; };
+		FDCA980D1F70CE8100EE14F8 /* LocalUseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalUseSection.swift; sourceTree = "<group>"; };
+		FDCA980F1F70CEC400EE14F8 /* GridDefinitionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridDefinitionSection.swift; sourceTree = "<group>"; };
+		FDCA98111F70D00C00EE14F8 /* ProductDefinitionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDefinitionSection.swift; sourceTree = "<group>"; };
+		FDCA98131F70D04800EE14F8 /* DataRepresentationSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepresentationSection.swift; sourceTree = "<group>"; };
+		FDCA98151F70D09100EE14F8 /* BitmapSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitmapSection.swift; sourceTree = "<group>"; };
+		FDCA98171F70D0AC00EE14F8 /* DataSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSection.swift; sourceTree = "<group>"; };
+		FDCA981A1F70D2C900EE14F8 /* Section3CodeTable0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3CodeTable0.swift; sourceTree = "<group>"; };
+		FDCA981C1F70D2D100EE14F8 /* Section3CodeTable1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3CodeTable1.swift; sourceTree = "<group>"; };
+		FDCA981E1F70D2D900EE14F8 /* Section3CodeTable11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3CodeTable11.swift; sourceTree = "<group>"; };
+		FDCA98221F70D8BF00EE14F8 /* GridDefinitionTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridDefinitionTemplate.swift; sourceTree = "<group>"; };
+		FDCA98241F70DAB400EE14F8 /* Section3Template0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3Template0.swift; sourceTree = "<group>"; };
+		FDCA98261F70DC3600EE14F8 /* Section3CodeTable2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3CodeTable2.swift; sourceTree = "<group>"; };
+		FDCA982A1F70DFB300EE14F8 /* Section3FlagTable3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3FlagTable3.swift; sourceTree = "<group>"; };
+		FDCA982C1F70DFBC00EE14F8 /* Section3FlagTable4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3FlagTable4.swift; sourceTree = "<group>"; };
+		FDCA982F1F711C2E00EE14F8 /* Section4CodeTable0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4CodeTable0.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		FDCA98321F71B06B00EE14F8 /* ProductDefinitionTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDefinitionTemplate.swift; sourceTree = "<group>"; };
+		FDCA98341F71B09D00EE14F8 /* Section4Template0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4Template0.swift; sourceTree = "<group>"; };
+		FDCA98361F71B0F400EE14F8 /* Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		FDCA98391F71B59600EE14F8 /* Section4CodeTable1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4CodeTable1.swift; sourceTree = "<group>"; };
+		FDCA983B1F71B5A100EE14F8 /* Section4CodeTable2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4CodeTable2.swift; sourceTree = "<group>"; };
+		FDCA983D1F71B5A800EE14F8 /* Section4CodeTable3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4CodeTable3.swift; sourceTree = "<group>"; };
+		FDCA983F1F71B5B100EE14F8 /* Section4CodeTable4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4CodeTable4.swift; sourceTree = "<group>"; };
+		FDCA98411F71B64500EE14F8 /* Section4CodeTable5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4CodeTable5.swift; sourceTree = "<group>"; };
+		FDF5DDC01F720CD500F9DC04 /* Section5CodeTable0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section5CodeTable0.swift; sourceTree = "<group>"; };
+		FDF5DDC31F720F9100F9DC04 /* DataRepresentationTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepresentationTemplate.swift; sourceTree = "<group>"; };
+		FDF5DDC51F7211DB00F9DC04 /* Section5Template0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section5Template0.swift; sourceTree = "<group>"; };
+		FDF9A6CB1F7215E20090DDDA /* Section5CodeTable1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section5CodeTable1.swift; sourceTree = "<group>"; };
+		FDF9A6CE1F7230520090DDDA /* Section6CodeTable0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section6CodeTable0.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDCA97E71F709A5200EE14F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD0D63891F71E1AC00288937 /* Grib API */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA97F41F709A8500EE14F8 /* GribFileStream.swift */,
+				FDCA97F61F70AB0000EE14F8 /* GribMessage.swift */,
+				FD0D638B1F71E1DA00288937 /* Sections */,
+				FD0D638C1F71E20400288937 /* Template */,
+				FD0D638F1F71E23600288937 /* Code Tables */,
+				FD0D63951F71E29200288937 /* Flag Tables */,
+			);
+			path = "Grib API";
+			sourceTree = "<group>";
+		};
+		FD0D638B1F71E1DA00288937 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA97F81F70ABCB00EE14F8 /* IndicatorSection.swift */,
+				FDCA97FF1F70B17800EE14F8 /* IdentificationSection.swift */,
+				FDCA980D1F70CE8100EE14F8 /* LocalUseSection.swift */,
+				FDCA980F1F70CEC400EE14F8 /* GridDefinitionSection.swift */,
+				FDCA98111F70D00C00EE14F8 /* ProductDefinitionSection.swift */,
+				FDCA98131F70D04800EE14F8 /* DataRepresentationSection.swift */,
+				FDCA98151F70D09100EE14F8 /* BitmapSection.swift */,
+				FDCA98171F70D0AC00EE14F8 /* DataSection.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		FD0D638C1F71E20400288937 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA98361F71B0F400EE14F8 /* Template.swift */,
+				FD0D638D1F71E21000288937 /* Section 3 */,
+				FD0D638E1F71E21700288937 /* Section 4 */,
+				FDF5DDC21F720F8400F9DC04 /* Section 5 */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		FD0D638D1F71E21000288937 /* Section 3 */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA98221F70D8BF00EE14F8 /* GridDefinitionTemplate.swift */,
+				FDCA98241F70DAB400EE14F8 /* Section3Template0.swift */,
+			);
+			path = "Section 3";
+			sourceTree = "<group>";
+		};
+		FD0D638E1F71E21700288937 /* Section 4 */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA98321F71B06B00EE14F8 /* ProductDefinitionTemplate.swift */,
+				FDCA98341F71B09D00EE14F8 /* Section4Template0.swift */,
+			);
+			path = "Section 4";
+			sourceTree = "<group>";
+		};
+		FD0D638F1F71E23600288937 /* Code Tables */ = {
+			isa = PBXGroup;
+			children = (
+				FD0D63901F71E24600288937 /* Section 0 */,
+				FD0D63911F71E24C00288937 /* Section 1 */,
+				FD0D63921F71E25500288937 /* Section 3 */,
+				FD0D63931F71E25B00288937 /* Section 4 */,
+				FD0D63941F71E26100288937 /* Section 5 */,
+				FDF9A6CD1F72303E0090DDDA /* Section 6 */,
+			);
+			path = "Code Tables";
+			sourceTree = "<group>";
+		};
+		FD0D63901F71E24600288937 /* Section 0 */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA97FD1F70AF7B00EE14F8 /* Section0CodeTable0.swift */,
+			);
+			path = "Section 0";
+			sourceTree = "<group>";
+		};
+		FD0D63911F71E24C00288937 /* Section 1 */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA98031F70B28700EE14F8 /* Section1CodeTable0.swift */,
+				FDCA98051F70B28F00EE14F8 /* Section1CodeTable1.swift */,
+				FDCA98071F70B29600EE14F8 /* Section1CodeTable2.swift */,
+				FDCA98091F70B2A000EE14F8 /* Section1CodeTable3.swift */,
+				FDCA980B1F70B2A800EE14F8 /* Section1CodeTable4.swift */,
+			);
+			path = "Section 1";
+			sourceTree = "<group>";
+		};
+		FD0D63921F71E25500288937 /* Section 3 */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA981A1F70D2C900EE14F8 /* Section3CodeTable0.swift */,
+				FDCA981C1F70D2D100EE14F8 /* Section3CodeTable1.swift */,
+				FDCA98261F70DC3600EE14F8 /* Section3CodeTable2.swift */,
+				FDCA981E1F70D2D900EE14F8 /* Section3CodeTable11.swift */,
+			);
+			path = "Section 3";
+			sourceTree = "<group>";
+		};
+		FD0D63931F71E25B00288937 /* Section 4 */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA982F1F711C2E00EE14F8 /* Section4CodeTable0.swift */,
+				FDCA98391F71B59600EE14F8 /* Section4CodeTable1.swift */,
+				FDCA983B1F71B5A100EE14F8 /* Section4CodeTable2.swift */,
+				FDCA983D1F71B5A800EE14F8 /* Section4CodeTable3.swift */,
+				FDCA983F1F71B5B100EE14F8 /* Section4CodeTable4.swift */,
+				FDCA98411F71B64500EE14F8 /* Section4CodeTable5.swift */,
+			);
+			path = "Section 4";
+			sourceTree = "<group>";
+		};
+		FD0D63941F71E26100288937 /* Section 5 */ = {
+			isa = PBXGroup;
+			children = (
+				FDF5DDC01F720CD500F9DC04 /* Section5CodeTable0.swift */,
+				FDF9A6CB1F7215E20090DDDA /* Section5CodeTable1.swift */,
+			);
+			path = "Section 5";
+			sourceTree = "<group>";
+		};
+		FD0D63951F71E29200288937 /* Flag Tables */ = {
+			isa = PBXGroup;
+			children = (
+				FDF5DDBF1F71E41800F9DC04 /* Section 3 */,
+			);
+			path = "Flag Tables";
+			sourceTree = "<group>";
+		};
+		FDCA97E11F709A5200EE14F8 = {
+			isa = PBXGroup;
+			children = (
+				FDCA97EC1F709A5200EE14F8 /* Project Grib */,
+				FDCA97EB1F709A5200EE14F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDCA97EB1F709A5200EE14F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA97EA1F709A5200EE14F8 /* Project Grib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDCA97EC1F709A5200EE14F8 /* Project Grib */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA97ED1F709A5200EE14F8 /* main.swift */,
+				FD0D63891F71E1AC00288937 /* Grib API */,
+			);
+			path = "Project Grib";
+			sourceTree = "<group>";
+		};
+		FDF5DDBF1F71E41800F9DC04 /* Section 3 */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA982A1F70DFB300EE14F8 /* Section3FlagTable3.swift */,
+				FDCA982C1F70DFBC00EE14F8 /* Section3FlagTable4.swift */,
+			);
+			path = "Section 3";
+			sourceTree = "<group>";
+		};
+		FDF5DDC21F720F8400F9DC04 /* Section 5 */ = {
+			isa = PBXGroup;
+			children = (
+				FDF5DDC31F720F9100F9DC04 /* DataRepresentationTemplate.swift */,
+				FDF5DDC51F7211DB00F9DC04 /* Section5Template0.swift */,
+			);
+			path = "Section 5";
+			sourceTree = "<group>";
+		};
+		FDF9A6CD1F72303E0090DDDA /* Section 6 */ = {
+			isa = PBXGroup;
+			children = (
+				FDF9A6CE1F7230520090DDDA /* Section6CodeTable0.swift */,
+			);
+			path = "Section 6";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDCA97E91F709A5200EE14F8 /* Project Grib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDCA97F11F709A5200EE14F8 /* Build configuration list for PBXNativeTarget "Project Grib" */;
+			buildPhases = (
+				FDCA97E61F709A5200EE14F8 /* Sources */,
+				FDCA97E71F709A5200EE14F8 /* Frameworks */,
+				FDCA97E81F709A5200EE14F8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Project Grib";
+			productName = "Project Grib";
+			productReference = FDCA97EA1F709A5200EE14F8 /* Project Grib */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDCA97E21F709A5200EE14F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Tristan Beaton";
+				TargetAttributes = {
+					FDCA97E91F709A5200EE14F8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Q628MNEAGU;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FDCA97E51F709A5200EE14F8 /* Build configuration list for PBXProject "Project Grib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FDCA97E11F709A5200EE14F8;
+			productRefGroup = FDCA97EB1F709A5200EE14F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDCA97E91F709A5200EE14F8 /* Project Grib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDCA97E61F709A5200EE14F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA98161F70D09100EE14F8 /* BitmapSection.swift in Sources */,
+				FDCA97EE1F709A5200EE14F8 /* main.swift in Sources */,
+				FDCA97F51F709A8500EE14F8 /* GribFileStream.swift in Sources */,
+				FDCA98351F71B09D00EE14F8 /* Section4Template0.swift in Sources */,
+				FDCA97F71F70AB0000EE14F8 /* GribMessage.swift in Sources */,
+				FDCA97FE1F70AF7B00EE14F8 /* Section0CodeTable0.swift in Sources */,
+				FDCA98371F71B0F400EE14F8 /* Template.swift in Sources */,
+				FDCA97F91F70ABCB00EE14F8 /* IndicatorSection.swift in Sources */,
+				FDCA981B1F70D2C900EE14F8 /* Section3CodeTable0.swift in Sources */,
+				FDCA98141F70D04800EE14F8 /* DataRepresentationSection.swift in Sources */,
+				FDCA98401F71B5B100EE14F8 /* Section4CodeTable4.swift in Sources */,
+				FDF5DDC61F7211DB00F9DC04 /* Section5Template0.swift in Sources */,
+				FDCA983A1F71B59600EE14F8 /* Section4CodeTable1.swift in Sources */,
+				FDF5DDC41F720F9100F9DC04 /* DataRepresentationTemplate.swift in Sources */,
+				FDCA982B1F70DFB300EE14F8 /* Section3FlagTable3.swift in Sources */,
+				FDCA98061F70B28F00EE14F8 /* Section1CodeTable1.swift in Sources */,
+				FDCA98181F70D0AC00EE14F8 /* DataSection.swift in Sources */,
+				FDF9A6CC1F7215E20090DDDA /* Section5CodeTable1.swift in Sources */,
+				FDF5DDC11F720CD500F9DC04 /* Section5CodeTable0.swift in Sources */,
+				FDCA98001F70B17800EE14F8 /* IdentificationSection.swift in Sources */,
+				FDCA980A1F70B2A000EE14F8 /* Section1CodeTable3.swift in Sources */,
+				FDCA983C1F71B5A100EE14F8 /* Section4CodeTable2.swift in Sources */,
+				FDCA98121F70D00C00EE14F8 /* ProductDefinitionSection.swift in Sources */,
+				FDCA983E1F71B5A800EE14F8 /* Section4CodeTable3.swift in Sources */,
+				FDCA98421F71B64500EE14F8 /* Section4CodeTable5.swift in Sources */,
+				FDCA98081F70B29600EE14F8 /* Section1CodeTable2.swift in Sources */,
+				FDCA980E1F70CE8100EE14F8 /* LocalUseSection.swift in Sources */,
+				FDCA982D1F70DFBC00EE14F8 /* Section3FlagTable4.swift in Sources */,
+				FDCA98101F70CEC400EE14F8 /* GridDefinitionSection.swift in Sources */,
+				FDCA98331F71B06B00EE14F8 /* ProductDefinitionTemplate.swift in Sources */,
+				FDCA98251F70DAB400EE14F8 /* Section3Template0.swift in Sources */,
+				FDCA98301F711C2E00EE14F8 /* Section4CodeTable0.swift in Sources */,
+				FDF9A6CF1F7230520090DDDA /* Section6CodeTable0.swift in Sources */,
+				FDCA981D1F70D2D100EE14F8 /* Section3CodeTable1.swift in Sources */,
+				FDCA981F1F70D2D900EE14F8 /* Section3CodeTable11.swift in Sources */,
+				FDCA98271F70DC3600EE14F8 /* Section3CodeTable2.swift in Sources */,
+				FDCA980C1F70B2A800EE14F8 /* Section1CodeTable4.swift in Sources */,
+				FDCA98041F70B28700EE14F8 /* Section1CodeTable0.swift in Sources */,
+				FDCA98231F70D8BF00EE14F8 /* GridDefinitionTemplate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FDCA97EF1F709A5200EE14F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDCA97F01F709A5200EE14F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		FDCA97F21F709A5200EE14F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = Q628MNEAGU;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		FDCA97F31F709A5200EE14F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = Q628MNEAGU;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDCA97E51F709A5200EE14F8 /* Build configuration list for PBXProject "Project Grib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDCA97EF1F709A5200EE14F8 /* Debug */,
+				FDCA97F01F709A5200EE14F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDCA97F11F709A5200EE14F8 /* Build configuration list for PBXNativeTarget "Project Grib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDCA97F21F709A5200EE14F8 /* Debug */,
+				FDCA97F31F709A5200EE14F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDCA97E21F709A5200EE14F8 /* Project object */;
+}

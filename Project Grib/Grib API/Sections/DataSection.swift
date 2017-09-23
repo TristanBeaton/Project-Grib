@@ -19,7 +19,8 @@ class DataSection {
         // Octet 5. Number of section (7)
         self.section = 7
         
-        // TODO: Finish this class
-        try stream.skip(Int(self.length) - 5)
+        try stream.skip(Int(length) - 9)
+        
+        print(try stream.readUI8(4))
     }
 }

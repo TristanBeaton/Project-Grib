@@ -127,23 +127,42 @@ class GribFileStream {
     
     func readInt16() throws -> Int16 {
         let data = try self.readInt(2)
-        return Int16((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 8 | data[1]))
+        var value = 1 - ((data[0] & 128) >> 6)
+        value *= (data[0] & 127) << 8 | data[1]
+        return Int16(value)
+        //Int16((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 8 | data[1]))
     }
     
     func readInt24() throws -> Int32 {
         let data = try self.readInt(3)
-        return Int32((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 16 | data[1] << 8 | data[2]))
+        var value = 1 - ((data[0] & 128) >> 6)
+        value *= (data[0] & 127) << 16 | data[1] << 8 | data[2]
+        return Int32(value)
+        //Int32((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 16 | data[1] << 8 | data[2]))
     }
     
     func readInt32() throws -> Int32 {
         let data = try self.readInt(4)
-        return Int32((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 24 | data[1] << 16 | data[2] << 8 | data[3]))
+        var value = 1 - ((data[0] & 128) >> 6)
+        value *= (data[0] & 127) << 24 | data[1] << 16 | data[2] << 8 | data[3]
+        return Int32(value)
+        //Int32((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 24 | data[1] << 16 | data[2] << 8 | data[3]))
     }
     
-//    func readInt64() throws -> Int64 {
-//        let data = try self.readInt(8).map{ Int64($0) }
-//        return Int64((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 56 | data[1] << 48 | data[2] << 40 | data[3] << 32 | data[4] << 24 | data[5] << 16 | data[6] << 8 | data[7]))
-//    }
+    func readInt64() throws -> Int64 {
+        let data = try self.readInt(8).map{ Int64($0) }
+        var value = 1 - ((data[0] & 128) >> 6)
+        value *= (data[0] & 127) << 56 | data[1] << 48 | data[2] << 40 | data[3] << 32 | data[4] << 24 | data[5] << 16 | data[6] << 8 | data[7]
+        return Int64(value)
+        //Int64((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 56 | data[1] << 48 | data[2] << 40 | data[3] << 32 | data[4] << 24 | data[5] << 16 | data[6] << 8 | data[7]))
+    }
+    
+    // MARK: - Floating Points
+    func readFloat() throws -> Float32 {
+        var f:Float32 = 0.0
+        memcpy(&f, try self.readUI8(4).reversed(), 4)
+        return f
+    }
     
     // MARK: - Strings
     func readString(_ length:Int) throws -> String {

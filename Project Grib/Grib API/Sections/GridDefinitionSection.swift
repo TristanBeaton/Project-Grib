@@ -24,7 +24,7 @@ class GridDefinitionSection {
         self.length = length
         // Octet 5. Number of section (3)
         self.section = 3
-        // Octet 6. 
+        // Octet 6. Source of grid definition
         self.sourceOfGridDefinition = Section3CodeTable0(try stream.readUI8())
         // Octets 7-10.
         self.numberOfDataPoints = try stream.readUI32()
