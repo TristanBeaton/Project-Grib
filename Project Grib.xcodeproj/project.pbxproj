@@ -61,8 +61,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD6FAFB81F81B5C800DDD175 /* JavaBinaraySection */ = {isa = PBXFileReference; lastKnownFileType = text; path = JavaBinaraySection; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.java; };
 		FDCA97EA1F709A5200EE14F8 /* Project Grib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project Grib"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCA97ED1F709A5200EE14F8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		FDCA97ED1F709A5200EE14F8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		FDCA97F41F709A8500EE14F8 /* GribFileStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GribFileStream.swift; sourceTree = "<group>"; };
 		FDCA97F61F70AB0000EE14F8 /* GribMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GribMessage.swift; sourceTree = "<group>"; };
 		FDCA97F81F70ABCB00EE14F8 /* IndicatorSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorSection.swift; sourceTree = "<group>"; };
@@ -265,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				FDCA97ED1F709A5200EE14F8 /* main.swift */,
+				FD6FAFB81F81B5C800DDD175 /* JavaBinaraySection */,
 				FD0D63891F71E1AC00288937 /* Grib API */,
 			);
 			path = "Project Grib";
