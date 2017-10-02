@@ -12,36 +12,51 @@ class DataSection {
     
     let length: UInt32
     let section: UInt8
+    let data: Array<Double>
     
-    init(_ stream:GribFileStream, _ length:UInt32, _ template:DataRepresentationTemplate) throws {
+    init(_ stream:GribFileStream, _ length:UInt32, _ gdt:GridDefinitionTemplate, _ drt:DataRepresentationTemplate) throws {
         // Octets 1-4. Length of section in octets
         self.length = length
         // Octet 5. Number of section (7)
         self.section = 7
-        
-        if let template = template as? Section5Template0 {
+        // Octets 6-nn. Data
+        if let gdt = gdt as? Section3Template0, let drt = drt as? Section5Template0 {
             // Prevents dividing by zero
-            if template.bitsPerValue != 0 {
-                // Y x 10D = R + X x 2E
-                let refValue = Double(template.referenceValue) // R
-                let binScale = Double(template.binaryScaleFactor) // E
-                let decimalScale = Double(template.decimalScaleFactor) // D
+            if drt.bitsPerValue != 0 {
+                
+                let refValue = Double(drt.referenceValue) // R
+                let binaryScale = Double(drt.binaryScaleFactor) // E
+                let decimalScale = Double(drt.decimalScaleFactor) // D
                 
                 let ref = pow(10, decimalScale) * refValue
-                let scale = pow(10, decimalScale) * pow(2, binScale)
+                let scale = pow(10, decimalScale) * pow(2, binaryScale)
                 
-                let dataCount = (Int(length) - 5) * 8 / Int(template.bitsPerValue)
+                let dataCount = (Int(length) - 5) * 8 / Int(drt.bitsPerValue)
+                print(dataCount)
                 
-                let startCoordinate = (lat: -47, lon: 166)
-                let endCoordinate = (lat: -32, lon: 179)
+                let latIncrement = gdt.iDirectionIncrement
+                let lonIncrement = gdt.jDirectionIncrement
                 
-                for lat in startCoordinate.lat ..< endCoordinate.lat + 1 {
-                    for lon in startCoordinate.lon ..< endCoordinate.lon + 1 {
-                        let value = (ref + scale * Double(try stream.readBits(Int(template.bitsPerValue))))
-                        print("\(lat), \(lon):", round((value - 27315) / 10) / 10)
+                let startLat = gdt.latitudeOfFirstGridPoint
+                let startLon = gdt.longitudeOfFirstGridPoint
+                
+                var data = Array(repeating: 0.0, count: dataCount)
+                var dataIndex = 0
+                
+                for latIndex in 0 ..< gdt.Nj {
+                    for lonIndex in 0 ..< gdt.Ni {
+                        let lat = startLat + (latIncrement * Double(latIndex))
+                        let lon = startLon + (lonIncrement * Double(lonIndex))
+                        data[dataIndex] = (ref + scale * Double(try stream.readBits(Int(drt.bitsPerValue))))
+                        print("\(lat), \(lon): \(round((data[dataIndex] - 27315) / 10) / 10)ºC")
+                        dataIndex += 1
                     }
                 }
+                self.data = data
+                return
             }
         }
+        // Currently not supporting any other data sections at the moment.
+        throw GribFileStreamError.InvalidFile
     }
 }

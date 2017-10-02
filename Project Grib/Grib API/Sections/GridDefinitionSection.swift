@@ -16,8 +16,8 @@ class GridDefinitionSection {
     let numberOfDataPoints: UInt32
     let numberOfOctectsForNumberOfPoints: UInt8
     let interpretationOfNumberOfPoints: Section3CodeTable11
-    let gridDefinitionTemplateNumber: Section3CodeTable1
-    let gridDefinitionTemplate: GridDefinitionTemplate
+    let templateNumber: Section3CodeTable1
+    let template: GridDefinitionTemplate
 
     init(_ stream:GribFileStream, _ length:UInt32) throws {
         // Octets 1-4. Length of section in octets
@@ -33,8 +33,8 @@ class GridDefinitionSection {
         // Octet 12.
         self.interpretationOfNumberOfPoints = Section3CodeTable11(try stream.readUI8())
         // Octets 13-14.
-        self.gridDefinitionTemplateNumber = Section3CodeTable1(try stream.readUI16())
+        self.templateNumber = Section3CodeTable1(try stream.readUI16())
         // Octets 15-xx. Grid Definition Template.
-        self.gridDefinitionTemplate = try GridDefinitionTemplate.template(stream, self.gridDefinitionTemplateNumber)
+        self.template = try GridDefinitionTemplate.template(stream, self.templateNumber)
     }
 }

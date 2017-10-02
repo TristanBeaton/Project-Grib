@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD6FAFBC1F81F6F800DDD175 /* GribFileStreamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6FAFBB1F81F6F800DDD175 /* GribFileStreamError.swift */; };
 		FDCA97EE1F709A5200EE14F8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97ED1F709A5200EE14F8 /* main.swift */; };
 		FDCA97F51F709A8500EE14F8 /* GribFileStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97F41F709A8500EE14F8 /* GribFileStream.swift */; };
 		FDCA97F71F70AB0000EE14F8 /* GribMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97F61F70AB0000EE14F8 /* GribMessage.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD6FAFBB1F81F6F800DDD175 /* GribFileStreamError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GribFileStreamError.swift; sourceTree = "<group>"; };
 		FDCA97EA1F709A5200EE14F8 /* Project Grib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project Grib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA97ED1F709A5200EE14F8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		FDCA97F41F709A8500EE14F8 /* GribFileStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GribFileStream.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				FDCA97F41F709A8500EE14F8 /* GribFileStream.swift */,
+				FD6FAFBB1F81F6F800DDD175 /* GribFileStreamError.swift */,
 				FDCA97F61F70AB0000EE14F8 /* GribMessage.swift */,
 				FD0D638B1F71E1DA00288937 /* Sections */,
 				FD0D638C1F71E20400288937 /* Template */,
@@ -370,6 +373,7 @@
 				FDF5DDC61F7211DB00F9DC04 /* Section5Template0.swift in Sources */,
 				FDCA983A1F71B59600EE14F8 /* Section4CodeTable1.swift in Sources */,
 				FDF5DDC41F720F9100F9DC04 /* DataRepresentationTemplate.swift in Sources */,
+				FD6FAFBC1F81F6F800DDD175 /* GribFileStreamError.swift in Sources */,
 				FDCA982B1F70DFB300EE14F8 /* Section3FlagTable3.swift in Sources */,
 				FDCA98061F70B28F00EE14F8 /* Section1CodeTable1.swift in Sources */,
 				FDCA98181F70D0AC00EE14F8 /* DataSection.swift in Sources */,

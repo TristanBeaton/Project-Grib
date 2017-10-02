@@ -30,7 +30,7 @@ class Section4Template0: ProductDefinitionTemplate {
         // Octet 10. Parameter category
         self.parameterCategory = Section4CodeTable1(try stream.readUI8())
         // Octet 11. Parameter number
-        self.parameterNumber = Section4CodeTable2(try stream.readUI8())
+        self.parameterNumber = Section4CodeTable2(parameterCategory, try stream.readUI8())
         // Octet 12. Type of generating process
         self.typeOfGeneratingProcess = Section4CodeTable3(try stream.readUI8())
         // Octet 13. Background generating process identifier

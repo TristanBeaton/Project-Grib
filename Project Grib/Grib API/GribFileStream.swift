@@ -192,13 +192,3 @@ class GribFileStream {
         for _ in 0 ..< length { let _ = try self.readUI8() }
     }
 }
-
-// MARK: - Errors
-enum GribFileStreamError : Error {
-    case EndOfFile
-    case InvalidFile
-    case InvalidSection(UInt8)
-    case InvalidString
-    case UnsupportedTemplate(Template)
-    case Unknown
-}

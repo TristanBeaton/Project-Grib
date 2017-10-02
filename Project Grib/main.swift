@@ -14,7 +14,7 @@ let presUrl = baseUrl + "&lev_mean_sea_level=on&var_PRMSL=on"
 let windUrl = baseUrl + "&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on"
 
 do {
-    let url = URL(string: tempUrl)!
+    let url = URL(string: "http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p25.pl?file=gfs.t00z.pgrb2.0p25.f000&lev_surface=on&var_TMP=on&subregion=&leftlon=166&rightlon=179&toplat=-32&bottomlat=-47&dir=%2Fgfs.2017100200")!
     let data = try Data(contentsOf: url)
     let stream = GribFileStream(data: data)
 

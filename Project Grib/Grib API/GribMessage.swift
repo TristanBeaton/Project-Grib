@@ -66,12 +66,11 @@ class GribMessage {
                     continue
                 case 7:
                     // Read the Date Section
-                    self.data = try DataSection(stream, length, drs.template)
+                    self.data = try DataSection(stream, length, gds.template, drs.template)
                     continue
                 default:
                     throw GribFileStreamError.InvalidSection(section)
             }
         }
-        dump(self)
     }
 }
