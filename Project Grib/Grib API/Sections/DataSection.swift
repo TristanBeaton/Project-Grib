@@ -31,10 +31,15 @@ class DataSection {
                 let scale = pow(10, decimalScale) * pow(2, binScale)
                 
                 let dataCount = (Int(length) - 5) * 8 / Int(template.bitsPerValue)
-                var data = Array(repeating: 0.0, count: dataCount)
                 
-                for i in 0 ..< dataCount {
-                    data[i] = (ref + scale * Double(try stream.readBits(Int(template.bitsPerValue))))
+                let startCoordinate = (lat: -47, lon: 166)
+                let endCoordinate = (lat: -32, lon: 179)
+                
+                for lat in startCoordinate.lat ..< endCoordinate.lat + 1 {
+                    for lon in startCoordinate.lon ..< endCoordinate.lon + 1 {
+                        let value = (ref + scale * Double(try stream.readBits(Int(template.bitsPerValue))))
+                        print("\(lat), \(lon):", round((value - 27315) / 10) / 10)
+                    }
                 }
             }
         }

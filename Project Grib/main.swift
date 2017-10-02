@@ -7,11 +7,14 @@
 //
 
 import Foundation
-// http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_1p00.pl?file=gfs.t18z.pgrb2.1p00.f000&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&subregion=&leftlon=166&rightlon=179&toplat=-32&bottomlat=-47&dir=%2Fgfs.2017100118
-// http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_1p00.pl?file=gfs.t18z.pgrb2.1p00.anl&lev_mean_sea_level=on&subregion=&leftlon=166&rightlon=179&toplat=-32&bottomlat=-47&dir=%2Fgfs.2017100118
+
+let baseUrl = "http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_1p00.pl?file=gfs.t18z.pgrb2.1p00.f000&dir=%2Fgfs.2017100118&subregion=&leftlon=166&rightlon=179&toplat=-32&bottomlat=-47"
+let tempUrl = baseUrl + "&lev_surface=on&var_TMP=on"
+let presUrl = baseUrl + "&lev_mean_sea_level=on&var_PRMSL=on"
+let windUrl = baseUrl + "&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on"
+
 do {
-    let url = URL(string: "http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_1p00.pl?file=gfs.t18z.pgrb2.1p00.f000&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&subregion=&leftlon=166&rightlon=179&toplat=-32&bottomlat=-47&dir=%2Fgfs.2017100118")!
-    
+    let url = URL(string: tempUrl)!
     let data = try Data(contentsOf: url)
     let stream = GribFileStream(data: data)
 
