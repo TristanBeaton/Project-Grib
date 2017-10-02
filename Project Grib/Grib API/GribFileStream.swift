@@ -79,7 +79,7 @@ class GribFileStream {
         if self.bits.count == 0 { return try self.readByte() }
         return UInt8(try self.readBits(8))
     }
-    
+
     func readUI8(_ length:Int) throws -> Array<UInt8> {
         var bytes = Array<UInt8>()
         for _ in 0 ..< length { bytes.append(try self.readUI8()) }
@@ -118,21 +118,28 @@ class GribFileStream {
     func readInt8() throws -> Int8 {
         return Int8(try self.readByte())
     }
+//    These only seem to work with positive numbers
+//    func readInt16() throws -> Int16 {
+//        let data = Array(try self.readUI8(2).reversed())
+//        return data.withUnsafeBytes { $0.baseAddress!.load(as: Int16.self) }
+//    }
+//
+//    func readInt32() throws -> Int32 {
+//        let data = Array(try self.readUI8(4).reversed())
+//        return data.withUnsafeBytes { $0.baseAddress!.load(as: Int32.self) }
+//    }
+//
+//    func readInt64() throws -> Int64 {
+//        let data = Array(try self.readUI8(8).reversed())
+//        return data.withUnsafeBytes { $0.baseAddress!.load(as: Int64.self) }
+//    }
     
+    // I'm not sure if all these methods are correct, but they seem to work.
     func readInt16() throws -> Int16 {
         let data = try self.readInt(2)
         var value = 1 - ((data[0] & 128) >> 6)
         value *= (data[0] & 127) << 8 | data[1]
         return Int16(value)
-        //Int16((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 8 | data[1]))
-    }
-    
-    func readInt24() throws -> Int32 {
-        let data = try self.readInt(3)
-        var value = 1 - ((data[0] & 128) >> 6)
-        value *= (data[0] & 127) << 16 | data[1] << 8 | data[2]
-        return Int32(value)
-        //Int32((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 16 | data[1] << 8 | data[2]))
     }
     
     func readInt32() throws -> Int32 {
@@ -140,7 +147,6 @@ class GribFileStream {
         var value = 1 - ((data[0] & 128) >> 6)
         value *= (data[0] & 127) << 24 | data[1] << 16 | data[2] << 8 | data[3]
         return Int32(value)
-        //Int32((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 24 | data[1] << 16 | data[2] << 8 | data[3]))
     }
     
     func readInt64() throws -> Int64 {
@@ -148,7 +154,6 @@ class GribFileStream {
         var value = 1 - ((data[0] & 128) >> 6)
         value *= (data[0] & 127) << 56 | data[1] << 48 | data[2] << 40 | data[3] << 32 | data[4] << 24 | data[5] << 16 | data[6] << 8 | data[7]
         return Int64(value)
-        //Int64((1 - ((data[0] & 128) >> 6)) * ((data[0] & 127) << 56 | data[1] << 48 | data[2] << 40 | data[3] << 32 | data[4] << 24 | data[5] << 16 | data[6] << 8 | data[7]))
     }
     
     // MARK: - Floating Points
