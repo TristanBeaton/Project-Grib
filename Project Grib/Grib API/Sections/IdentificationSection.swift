@@ -14,17 +14,17 @@ class IdentificationSection {
     let section: UInt8
     let centre: UInt16
     let subCentre: UInt16
-    let tablesVersion: Section1CodeTable0
+    let tablesVersion: UInt8
     let localTablesCount: UInt8
-    let significanceOfReferenceTime: Section1CodeTable2
+    let significanceOfReferenceTime: String
     let year: UInt16
     let month: UInt8
     let day: UInt8
     let hour: UInt8
     let minute: UInt8
     let second: UInt8
-    let productionStatusOfProcessedData: Section1CodeTable3
-    let typeOfProcessedData: Section1CodeTable4
+    let productionStatusOfProcessedData: UInt8
+    let typeOfProcessedData: UInt8
     
     init(_ stream:GribFileStream, _ length: UInt32) throws {
         // Octets 1-4. Length of section in octets (21 or nn)
@@ -36,11 +36,11 @@ class IdentificationSection {
         // Octets 8-9. Identification of originating/generating sub-centre
         self.subCentre = try stream.readUI16()
         // Octet 10. GRIB Master Tables Version Number
-        self.tablesVersion = Section1CodeTable0(try stream.readUI8())
+        self.tablesVersion = try stream.readUI8()
         // Octet 11. Version number of GRIB Local Tables used to augment Master Tables
         self.localTablesCount = try stream.readUI8()
         // Octet 12. Significance of Reference Time
-        self.significanceOfReferenceTime = Section1CodeTable2(try stream.readUI8())
+        self.significanceOfReferenceTime = try IdentificationSection.significanceOfReferenceTime(try stream.readUI8())
         // Octet 13-14. Year
         self.year = try stream.readUI16()
         // Octet 15. Month
@@ -54,10 +54,20 @@ class IdentificationSection {
         // Octet 15. Second
         self.second = try stream.readUI8()
         // Octet 20. Production status of processed data in this GRIB message
-        self.productionStatusOfProcessedData = Section1CodeTable3(try stream.readUI8())
+        self.productionStatusOfProcessedData = try stream.readUI8()
         // Octet 21. Type of processed data in this GRIB message
-        self.typeOfProcessedData = Section1CodeTable4(try stream.readUI8())
+        self.typeOfProcessedData = try stream.readUI8()
         // Octets 22-nn. Reserved: need not be present
         if self.length > 21 { try stream.skip(Int(length) - 21) }
+    }
+    
+    private static func significanceOfReferenceTime(_ value:UInt8) throws -> String {
+        switch value {
+            case 0: return "Analysis"
+            case 1: return "Start of Forecast"
+            case 2: return "Verifying Time of Forecast"
+            case 3: return "Observation Time"
+            default: throw GribFileStreamError.Custom("Project Grib doesn't support this significance of reference time: \(value)")
+        }
     }
 }

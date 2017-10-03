@@ -42,15 +42,29 @@ class DataSection {
                 var data = Array(repeating: 0.0, count: dataCount)
                 var dataIndex = 0
                 
+                var mn = 0.0
+                var mx = 0.0
+                
                 for latIndex in 0 ..< gdt.Nj {
                     for lonIndex in 0 ..< gdt.Ni {
                         let lat = startLat + (latIncrement * Double(latIndex))
                         let lon = startLon + (lonIncrement * Double(lonIndex))
                         data[dataIndex] = (ref + scale * Double(try stream.readBits(Int(drt.bitsPerValue))))
-                        print("\(lat), \(lon): \(round((data[dataIndex] - 27315) / 10) / 10)ºC")
+                        let temp = round((data[dataIndex] - 27315) / 10) / 10
+                        
+                        if latIndex == 0 && lonIndex == 0 {
+                            mn = temp
+                            mx = temp
+                        } else {
+                            mn = min(mn, temp)
+                            mx = max(mx, temp)
+                        }
+                        
+//                        print("\(lat)\t\(lon)\t\(temp)ºC")
                         dataIndex += 1
                     }
                 }
+//                print("Min: \(mn)\t Max: \(mx)")
                 self.data = data
                 return
             }

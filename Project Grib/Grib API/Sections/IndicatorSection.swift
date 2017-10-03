@@ -10,7 +10,7 @@ import Foundation
 
 class IndicatorSection {
     
-    let disipline: Section0CodeTable0
+    let disipline: String
     let edition: UInt8
     let length: UInt64
     
@@ -19,8 +19,8 @@ class IndicatorSection {
         if try stream.moveToStart() {
             // Octets 5-6. Reserved
             let _ = try stream.skip(2)
-            // Octet 7. Discipline - GRIB Master Table Number (see Code Table 0.0)
-            self.disipline = Section0CodeTable0(try stream.readUI8())
+            // Octet 7. Discipline
+            self.disipline = try IndicatorSection.disipline(try stream.readUI8())
             // Octet 8. GRIB Edition Number (currently 2)
             self.edition = try stream.readUI8()
             // Octets 9-16. Total length of GRIB message in octets (including Section 0)
@@ -28,5 +28,12 @@ class IndicatorSection {
             return
         }
         throw GribFileStreamError.InvalidFile
+    }
+    
+    private static func disipline(_ value:UInt8) throws -> String {
+        switch value {
+            case 0: return "Meteorological"
+            default: throw GribFileStreamError.Custom("Project Grib doesn't support this disipline: \(value)")
+        }
     }
 }

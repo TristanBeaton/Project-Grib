@@ -165,6 +165,10 @@ class GribFileStream {
         return f
     }
     
+    func readDoubleE6() throws -> Double {
+        return Double(try self.readInt32()) / pow(10, 6)
+    }
+    
     // MARK: - Strings
     func readString(_ length:Int) throws -> String {
         var bytes = Array<UInt8>()
