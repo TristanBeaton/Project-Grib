@@ -14,7 +14,7 @@ class DataSection {
     let section: UInt8
     let data: Array<Double>
     
-    init(_ stream:GribFileStream, _ length:UInt32, _ gdt:GridDefinitionTemplate, _ drt:DataRepresentationTemplate) throws {
+    init(_ stream:GribFileStream, _ length:UInt32, _ gdt:Template, _ drt:Template) throws {
         // Octets 1-4. Length of section in octets
         self.length = length
         // Octet 5. Number of section (7)
@@ -24,15 +24,14 @@ class DataSection {
             // Prevents dividing by zero
             if drt.bitsPerValue != 0 {
                 
-                let refValue = Double(drt.referenceValue) // R
-                let binaryScale = Double(drt.binaryScaleFactor) // E
-                let decimalScale = Double(drt.decimalScaleFactor) // D
+                let refValue = Double(drt.referenceValue)
+                let binaryScale = Double(drt.binaryScaleFactor)
+                let decimalScale = Double(drt.decimalScaleFactor)
                 
                 let ref = pow(10, decimalScale) * refValue
                 let scale = pow(10, decimalScale) * pow(2, binaryScale)
                 
                 let dataCount = (Int(length) - 5) * 8 / Int(drt.bitsPerValue)
-                print(dataCount)
                 
                 let latIncrement = gdt.iDirectionIncrement
                 let lonIncrement = gdt.jDirectionIncrement

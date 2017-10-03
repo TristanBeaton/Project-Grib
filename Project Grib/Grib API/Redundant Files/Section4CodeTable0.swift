@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Section4CodeTable0 : Template {
+enum Section4CodeTable0 {
     case AnalysisOrForecastAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
     case IndividualEnsembleForecastControlAndPerturbedAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime
     case DerivedForecastsBasedOnAllEnsembleMembersAtAHorizontalLevelOrInAHorizontalLayerAtAPointInTime

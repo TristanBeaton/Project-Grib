@@ -13,8 +13,8 @@ class DataRepresentationSection {
     let length: UInt32
     let section: UInt8
     let numberOfValues: UInt32
-    let dataRepresentationTemplateNumber: Section5CodeTable0
-    let template: DataRepresentationTemplate
+    let templateNo: UInt16
+    let template: Template
     
     init(_ stream:GribFileStream, _ length:UInt32) throws {
         // Octets 1-4. Length of section in octets
@@ -24,8 +24,17 @@ class DataRepresentationSection {
         // Octets 6-9. Number of data points where one or more values are specified in Section 7 when a bit map is present, total number of data points when a bit map is absent.
         self.numberOfValues = try stream.readUI32()
         // Octets 10-11. Data Representation Template Number
-        self.dataRepresentationTemplateNumber = Section5CodeTable0(try stream.readUI16())
+        self.templateNo = try stream.readUI16()
         // Octets 12-nn. Data Representation Template
-        self.template = try DataRepresentationTemplate.template(stream, self.dataRepresentationTemplateNumber)
+        self.template = try DataRepresentationSection.template(stream, self.templateNo)
+    }
+    
+    static private func template(_ stream:GribFileStream, _ templateNo:UInt16) throws -> Template {
+        switch templateNo {
+            // Grid Point Data Simple Packing
+            case 0: return try Section5Template0(stream)
+            // Throw error for unsupported templates.
+            default: throw GribFileStreamError.UnsupportedTemplate(5, templateNo)
+        }
     }
 }

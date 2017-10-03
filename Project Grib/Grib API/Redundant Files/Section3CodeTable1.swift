@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Section3CodeTable1 : Template {
+enum Section3CodeTable1 {
     case LatitudeLongitude
     case RotatedLatitudeLongitude
     case StretchedLatitudeLongitude

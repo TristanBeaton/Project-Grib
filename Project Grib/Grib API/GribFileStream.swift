@@ -112,7 +112,9 @@ class GribFileStream {
     
     // MARK: - Signed Bytes !!!! This may be incorrect !!!!
     private func readInt(_ length:Int) throws -> Array<Int> {
-        return try self.readUI8(length).map{ return Int($0) }
+        let bytes = try self.readUI8(length)
+        return bytes.map{ return Int($0) }
+//        return try self.readUI8(length).map{ return Int($0) }
     }
     
     func readInt8() throws -> Int8 {

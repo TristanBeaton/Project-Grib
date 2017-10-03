@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Section5CodeTable0 : Template {
+enum Section5CodeTable0 {
     case GridPointDataSimplePacking
     case MatrixValueSimplePacking
     case GridPointDataComplexPacking

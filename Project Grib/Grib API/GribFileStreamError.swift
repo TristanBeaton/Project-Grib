@@ -13,6 +13,6 @@ enum GribFileStreamError : Error {
     case InvalidFile
     case InvalidSection(UInt8)
     case InvalidString
-    case UnsupportedTemplate(Template)
+    case UnsupportedTemplate(Int, UInt16)
     case Unknown
 }

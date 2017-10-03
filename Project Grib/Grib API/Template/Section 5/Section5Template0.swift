@@ -8,8 +8,7 @@
 
 import Foundation
 
-class Section5Template0 : DataRepresentationTemplate {
-    
+class Section5Template0 : Template {
     let referenceValue: Float32
     let binaryScaleFactor: Int16
     let decimalScaleFactor: Int16

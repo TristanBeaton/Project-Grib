@@ -16,8 +16,8 @@ class GridDefinitionSection {
     let numberOfDataPoints: UInt32
     let numberOfOctectsForNumberOfPoints: UInt8
     let interpretationOfNumberOfPoints: Section3CodeTable11
-    let templateNumber: Section3CodeTable1
-    let template: GridDefinitionTemplate
+    let templateNo: UInt16
+    let template: Template
 
     init(_ stream:GribFileStream, _ length:UInt32) throws {
         // Octets 1-4. Length of section in octets
@@ -26,15 +26,24 @@ class GridDefinitionSection {
         self.section = 3
         // Octet 6. Source of grid definition
         self.sourceOfGridDefinition = Section3CodeTable0(try stream.readUI8())
-        // Octets 7-10.
+        // Octets 7-10. Number of data points
         self.numberOfDataPoints = try stream.readUI32()
-        // Octet 11.
+        // Octet 11. Number of octets for optional list of numbers
         self.numberOfOctectsForNumberOfPoints = try stream.readUI8()
-        // Octet 12.
+        // Octet 12. Interpretation of list of numbers
         self.interpretationOfNumberOfPoints = Section3CodeTable11(try stream.readUI8())
-        // Octets 13-14.
-        self.templateNumber = Section3CodeTable1(try stream.readUI16())
+        // Octets 13-14. Grid Definition Template Number
+        self.templateNo = try stream.readUI16()
         // Octets 15-xx. Grid Definition Template.
-        self.template = try GridDefinitionTemplate.template(stream, self.templateNumber)
+        self.template = try GridDefinitionSection.template(stream, self.templateNo)
+    }
+    
+    static private func template(_ stream:GribFileStream, _ templateNo:UInt16) throws -> Template {
+        switch templateNo {
+            // Latitude Longitude Template
+            case 0: return try Section3Template0(stream)
+            // Throw error for unsupported templates.
+            default: throw GribFileStreamError.UnsupportedTemplate(3, templateNo)
+        }
     }
 }

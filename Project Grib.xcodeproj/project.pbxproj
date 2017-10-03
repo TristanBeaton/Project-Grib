@@ -15,7 +15,6 @@
 		FDCA97FE1F70AF7B00EE14F8 /* Section0CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97FD1F70AF7B00EE14F8 /* Section0CodeTable0.swift */; };
 		FDCA98001F70B17800EE14F8 /* IdentificationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97FF1F70B17800EE14F8 /* IdentificationSection.swift */; };
 		FDCA98041F70B28700EE14F8 /* Section1CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98031F70B28700EE14F8 /* Section1CodeTable0.swift */; };
-		FDCA98061F70B28F00EE14F8 /* Section1CodeTable1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98051F70B28F00EE14F8 /* Section1CodeTable1.swift */; };
 		FDCA98081F70B29600EE14F8 /* Section1CodeTable2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98071F70B29600EE14F8 /* Section1CodeTable2.swift */; };
 		FDCA980A1F70B2A000EE14F8 /* Section1CodeTable3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98091F70B2A000EE14F8 /* Section1CodeTable3.swift */; };
 		FDCA980C1F70B2A800EE14F8 /* Section1CodeTable4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA980B1F70B2A800EE14F8 /* Section1CodeTable4.swift */; };
@@ -26,15 +25,11 @@
 		FDCA98161F70D09100EE14F8 /* BitmapSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98151F70D09100EE14F8 /* BitmapSection.swift */; };
 		FDCA98181F70D0AC00EE14F8 /* DataSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98171F70D0AC00EE14F8 /* DataSection.swift */; };
 		FDCA981B1F70D2C900EE14F8 /* Section3CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA981A1F70D2C900EE14F8 /* Section3CodeTable0.swift */; };
-		FDCA981D1F70D2D100EE14F8 /* Section3CodeTable1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA981C1F70D2D100EE14F8 /* Section3CodeTable1.swift */; };
 		FDCA981F1F70D2D900EE14F8 /* Section3CodeTable11.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA981E1F70D2D900EE14F8 /* Section3CodeTable11.swift */; };
-		FDCA98231F70D8BF00EE14F8 /* GridDefinitionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98221F70D8BF00EE14F8 /* GridDefinitionTemplate.swift */; };
 		FDCA98251F70DAB400EE14F8 /* Section3Template0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98241F70DAB400EE14F8 /* Section3Template0.swift */; };
 		FDCA98271F70DC3600EE14F8 /* Section3CodeTable2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98261F70DC3600EE14F8 /* Section3CodeTable2.swift */; };
 		FDCA982B1F70DFB300EE14F8 /* Section3FlagTable3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA982A1F70DFB300EE14F8 /* Section3FlagTable3.swift */; };
 		FDCA982D1F70DFBC00EE14F8 /* Section3FlagTable4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA982C1F70DFBC00EE14F8 /* Section3FlagTable4.swift */; };
-		FDCA98301F711C2E00EE14F8 /* Section4CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA982F1F711C2E00EE14F8 /* Section4CodeTable0.swift */; };
-		FDCA98331F71B06B00EE14F8 /* ProductDefinitionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98321F71B06B00EE14F8 /* ProductDefinitionTemplate.swift */; };
 		FDCA98351F71B09D00EE14F8 /* Section4Template0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98341F71B09D00EE14F8 /* Section4Template0.swift */; };
 		FDCA98371F71B0F400EE14F8 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98361F71B0F400EE14F8 /* Template.swift */; };
 		FDCA983A1F71B59600EE14F8 /* Section4CodeTable1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98391F71B59600EE14F8 /* Section4CodeTable1.swift */; };
@@ -42,8 +37,6 @@
 		FDCA983E1F71B5A800EE14F8 /* Section4CodeTable3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA983D1F71B5A800EE14F8 /* Section4CodeTable3.swift */; };
 		FDCA98401F71B5B100EE14F8 /* Section4CodeTable4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA983F1F71B5B100EE14F8 /* Section4CodeTable4.swift */; };
 		FDCA98421F71B64500EE14F8 /* Section4CodeTable5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA98411F71B64500EE14F8 /* Section4CodeTable5.swift */; };
-		FDF5DDC11F720CD500F9DC04 /* Section5CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5DDC01F720CD500F9DC04 /* Section5CodeTable0.swift */; };
-		FDF5DDC41F720F9100F9DC04 /* DataRepresentationTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5DDC31F720F9100F9DC04 /* DataRepresentationTemplate.swift */; };
 		FDF5DDC61F7211DB00F9DC04 /* Section5Template0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5DDC51F7211DB00F9DC04 /* Section5Template0.swift */; };
 		FDF9A6CC1F7215E20090DDDA /* Section5CodeTable1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9A6CB1F7215E20090DDDA /* Section5CodeTable1.swift */; };
 		FDF9A6CF1F7230520090DDDA /* Section6CodeTable0.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9A6CE1F7230520090DDDA /* Section6CodeTable0.swift */; };
@@ -84,13 +77,11 @@
 		FDCA981A1F70D2C900EE14F8 /* Section3CodeTable0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3CodeTable0.swift; sourceTree = "<group>"; };
 		FDCA981C1F70D2D100EE14F8 /* Section3CodeTable1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3CodeTable1.swift; sourceTree = "<group>"; };
 		FDCA981E1F70D2D900EE14F8 /* Section3CodeTable11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3CodeTable11.swift; sourceTree = "<group>"; };
-		FDCA98221F70D8BF00EE14F8 /* GridDefinitionTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridDefinitionTemplate.swift; sourceTree = "<group>"; };
 		FDCA98241F70DAB400EE14F8 /* Section3Template0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3Template0.swift; sourceTree = "<group>"; };
 		FDCA98261F70DC3600EE14F8 /* Section3CodeTable2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3CodeTable2.swift; sourceTree = "<group>"; };
 		FDCA982A1F70DFB300EE14F8 /* Section3FlagTable3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3FlagTable3.swift; sourceTree = "<group>"; };
 		FDCA982C1F70DFBC00EE14F8 /* Section3FlagTable4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section3FlagTable4.swift; sourceTree = "<group>"; };
 		FDCA982F1F711C2E00EE14F8 /* Section4CodeTable0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4CodeTable0.swift; sourceTree = "<group>"; wrapsLines = 0; };
-		FDCA98321F71B06B00EE14F8 /* ProductDefinitionTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDefinitionTemplate.swift; sourceTree = "<group>"; };
 		FDCA98341F71B09D00EE14F8 /* Section4Template0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4Template0.swift; sourceTree = "<group>"; };
 		FDCA98361F71B0F400EE14F8 /* Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		FDCA98391F71B59600EE14F8 /* Section4CodeTable1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4CodeTable1.swift; sourceTree = "<group>"; };
@@ -99,7 +90,6 @@
 		FDCA983F1F71B5B100EE14F8 /* Section4CodeTable4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4CodeTable4.swift; sourceTree = "<group>"; };
 		FDCA98411F71B64500EE14F8 /* Section4CodeTable5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section4CodeTable5.swift; sourceTree = "<group>"; };
 		FDF5DDC01F720CD500F9DC04 /* Section5CodeTable0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section5CodeTable0.swift; sourceTree = "<group>"; };
-		FDF5DDC31F720F9100F9DC04 /* DataRepresentationTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepresentationTemplate.swift; sourceTree = "<group>"; };
 		FDF5DDC51F7211DB00F9DC04 /* Section5Template0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section5Template0.swift; sourceTree = "<group>"; };
 		FDF9A6CB1F7215E20090DDDA /* Section5CodeTable1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section5CodeTable1.swift; sourceTree = "<group>"; };
 		FDF9A6CE1F7230520090DDDA /* Section6CodeTable0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section6CodeTable0.swift; sourceTree = "<group>"; };
@@ -126,6 +116,7 @@
 				FD0D638C1F71E20400288937 /* Template */,
 				FD0D638F1F71E23600288937 /* Code Tables */,
 				FD0D63951F71E29200288937 /* Flag Tables */,
+				FDC804811F8316D600651BB4 /* Redundant Files */,
 			);
 			path = "Grib API";
 			sourceTree = "<group>";
@@ -159,7 +150,6 @@
 		FD0D638D1F71E21000288937 /* Section 3 */ = {
 			isa = PBXGroup;
 			children = (
-				FDCA98221F70D8BF00EE14F8 /* GridDefinitionTemplate.swift */,
 				FDCA98241F70DAB400EE14F8 /* Section3Template0.swift */,
 			);
 			path = "Section 3";
@@ -168,7 +158,6 @@
 		FD0D638E1F71E21700288937 /* Section 4 */ = {
 			isa = PBXGroup;
 			children = (
-				FDCA98321F71B06B00EE14F8 /* ProductDefinitionTemplate.swift */,
 				FDCA98341F71B09D00EE14F8 /* Section4Template0.swift */,
 			);
 			path = "Section 4";
@@ -199,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				FDCA98031F70B28700EE14F8 /* Section1CodeTable0.swift */,
-				FDCA98051F70B28F00EE14F8 /* Section1CodeTable1.swift */,
 				FDCA98071F70B29600EE14F8 /* Section1CodeTable2.swift */,
 				FDCA98091F70B2A000EE14F8 /* Section1CodeTable3.swift */,
 				FDCA980B1F70B2A800EE14F8 /* Section1CodeTable4.swift */,
@@ -211,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				FDCA981A1F70D2C900EE14F8 /* Section3CodeTable0.swift */,
-				FDCA981C1F70D2D100EE14F8 /* Section3CodeTable1.swift */,
 				FDCA98261F70DC3600EE14F8 /* Section3CodeTable2.swift */,
 				FDCA981E1F70D2D900EE14F8 /* Section3CodeTable11.swift */,
 			);
@@ -221,7 +208,6 @@
 		FD0D63931F71E25B00288937 /* Section 4 */ = {
 			isa = PBXGroup;
 			children = (
-				FDCA982F1F711C2E00EE14F8 /* Section4CodeTable0.swift */,
 				FDCA98391F71B59600EE14F8 /* Section4CodeTable1.swift */,
 				FDCA983B1F71B5A100EE14F8 /* Section4CodeTable2.swift */,
 				FDCA983D1F71B5A800EE14F8 /* Section4CodeTable3.swift */,
@@ -234,7 +220,6 @@
 		FD0D63941F71E26100288937 /* Section 5 */ = {
 			isa = PBXGroup;
 			children = (
-				FDF5DDC01F720CD500F9DC04 /* Section5CodeTable0.swift */,
 				FDF9A6CB1F7215E20090DDDA /* Section5CodeTable1.swift */,
 			);
 			path = "Section 5";
@@ -246,6 +231,17 @@
 				FDF5DDBF1F71E41800F9DC04 /* Section 3 */,
 			);
 			path = "Flag Tables";
+			sourceTree = "<group>";
+		};
+		FDC804811F8316D600651BB4 /* Redundant Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA98051F70B28F00EE14F8 /* Section1CodeTable1.swift */,
+				FDCA981C1F70D2D100EE14F8 /* Section3CodeTable1.swift */,
+				FDCA982F1F711C2E00EE14F8 /* Section4CodeTable0.swift */,
+				FDF5DDC01F720CD500F9DC04 /* Section5CodeTable0.swift */,
+			);
+			path = "Redundant Files";
 			sourceTree = "<group>";
 		};
 		FDCA97E11F709A5200EE14F8 = {
@@ -285,7 +281,6 @@
 		FDF5DDC21F720F8400F9DC04 /* Section 5 */ = {
 			isa = PBXGroup;
 			children = (
-				FDF5DDC31F720F9100F9DC04 /* DataRepresentationTemplate.swift */,
 				FDF5DDC51F7211DB00F9DC04 /* Section5Template0.swift */,
 			);
 			path = "Section 5";
@@ -372,13 +367,10 @@
 				FDCA98401F71B5B100EE14F8 /* Section4CodeTable4.swift in Sources */,
 				FDF5DDC61F7211DB00F9DC04 /* Section5Template0.swift in Sources */,
 				FDCA983A1F71B59600EE14F8 /* Section4CodeTable1.swift in Sources */,
-				FDF5DDC41F720F9100F9DC04 /* DataRepresentationTemplate.swift in Sources */,
 				FD6FAFBC1F81F6F800DDD175 /* GribFileStreamError.swift in Sources */,
 				FDCA982B1F70DFB300EE14F8 /* Section3FlagTable3.swift in Sources */,
-				FDCA98061F70B28F00EE14F8 /* Section1CodeTable1.swift in Sources */,
 				FDCA98181F70D0AC00EE14F8 /* DataSection.swift in Sources */,
 				FDF9A6CC1F7215E20090DDDA /* Section5CodeTable1.swift in Sources */,
-				FDF5DDC11F720CD500F9DC04 /* Section5CodeTable0.swift in Sources */,
 				FDCA98001F70B17800EE14F8 /* IdentificationSection.swift in Sources */,
 				FDCA980A1F70B2A000EE14F8 /* Section1CodeTable3.swift in Sources */,
 				FDCA983C1F71B5A100EE14F8 /* Section4CodeTable2.swift in Sources */,
@@ -389,16 +381,12 @@
 				FDCA980E1F70CE8100EE14F8 /* LocalUseSection.swift in Sources */,
 				FDCA982D1F70DFBC00EE14F8 /* Section3FlagTable4.swift in Sources */,
 				FDCA98101F70CEC400EE14F8 /* GridDefinitionSection.swift in Sources */,
-				FDCA98331F71B06B00EE14F8 /* ProductDefinitionTemplate.swift in Sources */,
 				FDCA98251F70DAB400EE14F8 /* Section3Template0.swift in Sources */,
-				FDCA98301F711C2E00EE14F8 /* Section4CodeTable0.swift in Sources */,
 				FDF9A6CF1F7230520090DDDA /* Section6CodeTable0.swift in Sources */,
-				FDCA981D1F70D2D100EE14F8 /* Section3CodeTable1.swift in Sources */,
 				FDCA981F1F70D2D900EE14F8 /* Section3CodeTable11.swift in Sources */,
 				FDCA98271F70DC3600EE14F8 /* Section3CodeTable2.swift in Sources */,
 				FDCA980C1F70B2A800EE14F8 /* Section1CodeTable4.swift in Sources */,
 				FDCA98041F70B28700EE14F8 /* Section1CodeTable0.swift in Sources */,
-				FDCA98231F70D8BF00EE14F8 /* GridDefinitionTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

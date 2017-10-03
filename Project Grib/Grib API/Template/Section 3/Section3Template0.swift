@@ -8,8 +8,7 @@
 
 import Foundation
 
-class Section3Template0 : GridDefinitionTemplate {
-    
+class Section3Template0 : Template {
     let shapeOfTheEarth: Section3CodeTable2
     let scaleFactorOfRadiusOfSphericalEarth: UInt8
     let scaledValueOfRadiusOfSphericalEarth: UInt32

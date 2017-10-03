@@ -13,8 +13,8 @@ class ProductDefinitionSection {
     let length: UInt32
     let section: UInt8
     let NV: UInt16
-    let productDefinitionTemplateNumber: Section4CodeTable0
-    let template: ProductDefinitionTemplate
+    let templateNo: UInt16
+    let template: Template
     
     init(_ stream:GribFileStream, _ length:UInt32) throws {
         // Octets 1-4. Length of section in octets
@@ -24,8 +24,17 @@ class ProductDefinitionSection {
         // Octets 6-7. Number of coordinates values after Template
         self.NV = try stream.readUI16()
         // Octets 8-9. Product Definition Template Number
-        self.productDefinitionTemplateNumber = Section4CodeTable0(try stream.readUI16())
+        self.templateNo = try stream.readUI16()
         // Octets 10-nn. Product Definition Template
-        self.template = try ProductDefinitionTemplate.template(stream, self.productDefinitionTemplateNumber)
+        self.template = try ProductDefinitionSection.template(stream, self.templateNo)
+    }
+    
+    static private func template(_ stream:GribFileStream, _ templateNo:UInt16) throws -> Template {
+        switch templateNo {
+            // Analysis or Forecast at a Horizontal Level or in a Horizontal Layer at a Point in Time
+            case 0: return try Section4Template0(stream)
+            // Throw error for unsupported templates.
+            default: throw GribFileStreamError.UnsupportedTemplate(4, templateNo)
+        }
     }
 }

@@ -8,8 +8,7 @@
 
 import Foundation
 
-class Section4Template0: ProductDefinitionTemplate {
-    
+class Section4Template0 : Template {
     let parameterCategory: Section4CodeTable1
     let parameterNumber: Section4CodeTable2
     let typeOfGeneratingProcess: Section4CodeTable3

@@ -15,7 +15,7 @@ class IdentificationSection {
     let centre: UInt16
     let subCentre: UInt16
     let tablesVersion: Section1CodeTable0
-    let localTablesVersion: Section1CodeTable1
+    let localTablesCount: UInt8
     let significanceOfReferenceTime: Section1CodeTable2
     let year: UInt16
     let month: UInt8
@@ -38,7 +38,7 @@ class IdentificationSection {
         // Octet 10. GRIB Master Tables Version Number
         self.tablesVersion = Section1CodeTable0(try stream.readUI8())
         // Octet 11. Version number of GRIB Local Tables used to augment Master Tables
-        self.localTablesVersion = Section1CodeTable1(try stream.readUI8())
+        self.localTablesCount = try stream.readUI8()
         // Octet 12. Significance of Reference Time
         self.significanceOfReferenceTime = Section1CodeTable2(try stream.readUI8())
         // Octet 13-14. Year
