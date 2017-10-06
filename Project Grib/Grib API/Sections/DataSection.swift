@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataSection {
+class DataSection : Encodable {
     
     let length: UInt32
     let section: UInt8

@@ -10,8 +10,8 @@ import Foundation
 
 class Section4Template0 : Template {
     
-    let parameterCategory: ParameterCategory
-    let parameterNumber: Parameter
+    let parameterCategory: UInt8
+    let parameterNumber: UInt8
     let typeOfGeneratingProcess: UInt8
     let backgroundProcess: UInt8
     let generatingProcessIdentifier: UInt8
@@ -26,24 +26,11 @@ class Section4Template0 : Template {
     let scaleFactorOfSecondFixedSurface: Int8
     let scaledValueOfSecondFixedSurface: UInt32
     
-    enum ParameterCategory {
-        case Temperature
-        case Momentum
-        case Mass
-    }
-    
-    enum Parameter {
-        case Temperature
-        case uComponent
-        case vComponent
-        case PressureReducedMSL
-    }
-    
     init(_ stream:GribFileStream) throws {
         // Octet 10. Parameter category
-        self.parameterCategory = try Section4Template0.parameterCategory(try stream.readUI8())
+        self.parameterCategory = try stream.readUI8()
         // Octet 11. Parameter number
-        self.parameterNumber = try Section4Template0.parameterNumber(try stream.readUI8(), self.parameterCategory)
+        self.parameterNumber = try stream.readUI8()
         // Octet 12. Type of generating process
         self.typeOfGeneratingProcess = try stream.readUI8()
         // Octet 13. Background generating process identifier
@@ -70,36 +57,5 @@ class Section4Template0 : Template {
         self.scaleFactorOfSecondFixedSurface = try stream.readInt8()
         // Octets 31-34. Scaled value of second fixed surface
         self.scaledValueOfSecondFixedSurface = try stream.readUI32()
-    }
-    
-    private static func parameterCategory(_ value:UInt8) throws -> ParameterCategory {
-        switch value {
-            case 0: return .Temperature
-            case 2: return .Momentum
-            case 3: return .Mass
-            default: throw GribFileStreamError.InvalidFile
-        }
-    }
-    
-    private static func parameterNumber(_ value:UInt8, _ category:ParameterCategory) throws -> Parameter {
-        switch category {
-        case .Temperature:
-            switch value {
-                case 0: return .Temperature
-                default: throw GribFileStreamError.InvalidFile
-            }
-        case .Momentum:
-            switch value {
-                case 2: return .uComponent
-                case 3: return .vComponent
-                default: throw GribFileStreamError.InvalidFile
-            }
-        case .Mass:
-            switch value {
-                case 1: return .PressureReducedMSL
-                default: throw GribFileStreamError.InvalidFile
-            }
-        default: throw GribFileStreamError.InvalidFile
-        }
     }
 }

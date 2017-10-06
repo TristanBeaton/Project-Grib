@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD6FAFBC1F81F6F800DDD175 /* GribFileStreamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6FAFBB1F81F6F800DDD175 /* GribFileStreamError.swift */; };
+		FD9D51BE1F859C2600AFC0FC /* GribInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D51BD1F859C2600AFC0FC /* GribInterpreter.swift */; };
 		FDCA97EE1F709A5200EE14F8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97ED1F709A5200EE14F8 /* main.swift */; };
 		FDCA97F51F709A8500EE14F8 /* GribFileStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97F41F709A8500EE14F8 /* GribFileStream.swift */; };
 		FDCA97F71F70AB0000EE14F8 /* GribMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA97F61F70AB0000EE14F8 /* GribMessage.swift */; };
@@ -39,12 +40,13 @@
 
 /* Begin PBXFileReference section */
 		FD6FAFBB1F81F6F800DDD175 /* GribFileStreamError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GribFileStreamError.swift; sourceTree = "<group>"; };
+		FD9D51BD1F859C2600AFC0FC /* GribInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GribInterpreter.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		FDCA97EA1F709A5200EE14F8 /* Project Grib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project Grib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA97ED1F709A5200EE14F8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		FDCA97F41F709A8500EE14F8 /* GribFileStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GribFileStream.swift; sourceTree = "<group>"; };
 		FDCA97F61F70AB0000EE14F8 /* GribMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GribMessage.swift; sourceTree = "<group>"; };
 		FDCA97F81F70ABCB00EE14F8 /* IndicatorSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorSection.swift; sourceTree = "<group>"; };
-		FDCA97FF1F70B17800EE14F8 /* IdentificationSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentificationSection.swift; sourceTree = "<group>"; };
+		FDCA97FF1F70B17800EE14F8 /* IdentificationSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentificationSection.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		FDCA980D1F70CE8100EE14F8 /* LocalUseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalUseSection.swift; sourceTree = "<group>"; };
 		FDCA980F1F70CEC400EE14F8 /* GridDefinitionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridDefinitionSection.swift; sourceTree = "<group>"; };
 		FDCA98111F70D00C00EE14F8 /* ProductDefinitionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDefinitionSection.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				FDCA97F41F709A8500EE14F8 /* GribFileStream.swift */,
 				FD6FAFBB1F81F6F800DDD175 /* GribFileStreamError.swift */,
 				FDCA97F61F70AB0000EE14F8 /* GribMessage.swift */,
+				FD9D51BD1F859C2600AFC0FC /* GribInterpreter.swift */,
 				FD0D638B1F71E1DA00288937 /* Sections */,
 				FD0D638C1F71E20400288937 /* Template */,
 			);
@@ -217,6 +220,7 @@
 			files = (
 				FDCA98161F70D09100EE14F8 /* BitmapSection.swift in Sources */,
 				FDCA97EE1F709A5200EE14F8 /* main.swift in Sources */,
+				FD9D51BE1F859C2600AFC0FC /* GribInterpreter.swift in Sources */,
 				FDCA97F51F709A8500EE14F8 /* GribFileStream.swift in Sources */,
 				FDCA98351F71B09D00EE14F8 /* Section4Template0.swift in Sources */,
 				FDCA97F71F70AB0000EE14F8 /* GribMessage.swift in Sources */,

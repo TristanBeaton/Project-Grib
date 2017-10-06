@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LocalUseSection {
+class LocalUseSection : Encodable {
     
     let length: UInt32
     let section: UInt8

@@ -71,6 +71,5 @@ class GribMessage {
                     throw GribFileStreamError.InvalidSection(section)
             }
         }
-        dump(self)
     }
 }

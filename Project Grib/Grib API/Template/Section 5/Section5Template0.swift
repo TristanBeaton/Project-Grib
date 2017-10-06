@@ -14,12 +14,7 @@ class Section5Template0 : Template {
     let binaryScaleFactor: Int16
     let decimalScaleFactor: Int16
     let bitsPerValue: UInt8
-    let typeOfOriginalFieldValues: DataType
-    
-    enum DataType {
-        case FloatingPoint
-        case Integer
-    }
+    let typeOfOriginalFieldValues: UInt8
     
     init(_ stream:GribFileStream) throws {
         // Octets 12-15. Reference value (R)
@@ -31,14 +26,6 @@ class Section5Template0 : Template {
         // Octet 20. Number of bits used for each packed value for simple packing, or for each group reference value for complex packing or spatial differencing
         self.bitsPerValue = try stream.readUI8()
         // Octet 21. Type of original field values
-        self.typeOfOriginalFieldValues = try Section5Template0.typeOfOriginalFieldValues(try stream.readUI8())
-    }
-    
-    private static func typeOfOriginalFieldValues(_ value:UInt8) throws -> DataType {
-        switch value {
-            case 0: return .FloatingPoint
-            case 1: return .Integer
-            default: throw GribFileStreamError.InvalidFile
-        }
+        self.typeOfOriginalFieldValues = try stream.readUI8() //try Section5Template0.typeOfOriginalFieldValues(try stream.readUI8())
     }
 }

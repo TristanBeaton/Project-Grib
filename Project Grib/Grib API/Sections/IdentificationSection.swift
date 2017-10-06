@@ -14,9 +14,9 @@ class IdentificationSection {
     let section: UInt8
     let centre: UInt16
     let subCentre: UInt16
-    let tablesVersion: UInt8
-    let localTablesCount: UInt8
-    let significanceOfReferenceTime: String
+    let masterTableVersion: UInt8
+    let localTableCount: UInt8
+    let significanceOfReferenceTime: UInt8
     let year: UInt16
     let month: UInt8
     let day: UInt8
@@ -36,11 +36,11 @@ class IdentificationSection {
         // Octets 8-9. Identification of originating/generating sub-centre
         self.subCentre = try stream.readUI16()
         // Octet 10. GRIB Master Tables Version Number
-        self.tablesVersion = try stream.readUI8()
+        self.masterTableVersion = try stream.readUI8()
         // Octet 11. Version number of GRIB Local Tables used to augment Master Tables
-        self.localTablesCount = try stream.readUI8()
+        self.localTableCount = try stream.readUI8()
         // Octet 12. Significance of Reference Time
-        self.significanceOfReferenceTime = try IdentificationSection.significanceOfReferenceTime(try stream.readUI8())
+        self.significanceOfReferenceTime = try stream.readUI8()
         // Octet 13-14. Year
         self.year = try stream.readUI16()
         // Octet 15. Month
@@ -59,15 +59,5 @@ class IdentificationSection {
         self.typeOfProcessedData = try stream.readUI8()
         // Octets 22-nn. Reserved: need not be present
         if self.length > 21 { try stream.skip(Int(length) - 21) }
-    }
-    
-    private static func significanceOfReferenceTime(_ value:UInt8) throws -> String {
-        switch value {
-            case 0: return "Analysis"
-            case 1: return "Start of Forecast"
-            case 2: return "Verifying Time of Forecast"
-            case 3: return "Observation Time"
-            default: throw GribFileStreamError.Custom("Project Grib doesn't support this significance of reference time: \(value)")
-        }
     }
 }

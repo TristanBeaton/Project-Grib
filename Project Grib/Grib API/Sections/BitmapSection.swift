@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BitmapSection {
+class BitmapSection : Encodable {
     
     let length: UInt32
     let section: UInt8
